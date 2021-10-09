@@ -11,14 +11,38 @@ import {CovalentMarkdownModule} from "@covalent/markdown";
 import {CovalentBaseEchartsModule} from "@covalent/echarts/base";
 import {CovalentHttpModule} from "@covalent/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MainComponent} from "./main/main.component";
+import {MatChipsModule} from "@angular/material/chips";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatTableModule} from "@angular/material/table";
+import {CovalentDataTableModule} from "@covalent/core/data-table";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatCardModule} from "@angular/material/card";
+import {MatList, MatListModule} from "@angular/material/list";
+import {FlexLayoutModule} from "@angular/flex-layout";
+import { OrdersComponent } from './orders/orders.component';
+import {PrescriptionRefillComponent} from "./prescription-refill/prescription-refill.component";
+import {PrescriptionOrderDetailComponent} from "./prescription-order-detail/prescription-order-detail.component";
+import {CovalentMessageModule} from "@covalent/core/message";
+import {PrescriptionOrdersComponent} from "./prescription-orders/prescription-orders.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    OrdersComponent,
+      PrescriptionRefillComponent,
+      PrescriptionOrderDetailComponent,
+      PrescriptionOrdersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+
     CovalentLayoutModule,
     CovalentStepsModule,
     // (optional) Additional Covalent Modules imports
@@ -27,7 +51,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CovalentMarkdownModule,
     CovalentDynamicFormsModule,
     CovalentBaseEchartsModule,
-    BrowserAnimationsModule
+    CovalentMessageModule,
+
+
+    MatIconModule,
+    MatButtonModule,
+    CovalentDataTableModule,
+    MatMenuModule,
+    MatListModule,
+    MatCardModule,
+    MatTableModule,
+    MatTooltipModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
