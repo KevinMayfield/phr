@@ -24,7 +24,7 @@ export class PrescriptionRefillComponent implements OnInit {
    
    From this list it would make sense to be able to reorder the medications (this is only possible via IM1 interfaces), this is suboptimal and proabably should be a FHIR ServiceRequest.
  `;
-    displayedColumns: string[] = ['concept', 'name', 'quantity', 'unit','reorder_medication'];
+    displayedColumns: string[] = ['name','courseOfTherapy',  'quantity', 'unit','reorder_medication'];
 
     dataSource : any;
 
@@ -33,13 +33,15 @@ export class PrescriptionRefillComponent implements OnInit {
             'concept' : '322237000',
             'name' : 'Paracetamol 500mg soluble tablets',
             'quantity' : '100',
-            'unit' : 'tablet'
+            'unit' : 'tablet',
+            'courseOfTherapy': 'continuous'
         },
         {
             'concept' : '35936511000001108',
             'name' : 'Salbutamol 100micrograms/dose inhaler',
             'quantity' : '200',
-            'unit' : 'dose'
+            'unit' : 'dose',
+            'courseOfTherapy': 'continuous'
         }
     ]
 

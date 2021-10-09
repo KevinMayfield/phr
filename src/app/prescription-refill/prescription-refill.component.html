@@ -23,6 +23,12 @@
             <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
         </ng-container>
 
+
+        <ng-container matColumnDef="courseOfTherapy">
+            <th mat-header-cell *matHeaderCellDef> Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.courseOfTherapy}} </td>
+        </ng-container>
+
         <!-- Symbol Column -->
         <ng-container matColumnDef="unit">
             <th mat-header-cell *matHeaderCellDef> Unit </th>
