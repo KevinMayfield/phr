@@ -25,7 +25,7 @@ export class PrescriptionOrdersComponent implements OnInit {
    
  `;
 
-    displayedColumns: string[] = ['status','pharmacy', 'items','order_number', 'return_order', 'view_order', 'track_order'];
+    displayedColumns: string[] = ['status','requester','pharmacy', 'medications','order_number', 'return_order', 'view_order', 'track_order'];
 
     dataSource : any;
     data: any[] =  [
@@ -36,7 +36,12 @@ export class PrescriptionOrdersComponent implements OnInit {
           'order_number': '123453-ABCDFE-12345',
           'status' : 'in-progress',
           'pharmacy' : 'Boots - Springs, Austhorpe',
-          'items' : 2
+          'requester': 'Churchview Surgery',
+          'items' : 2,
+          'medication': [
+              'Paracetamol 500mg soluble tablets',
+              'Salbutamol 100micrograms/dose inhaler'
+          ]
       },
         {
             'first_name' : 'Scarlett',
@@ -45,7 +50,12 @@ export class PrescriptionOrdersComponent implements OnInit {
             'order_number': '453123-ABCDFE-34512',
             'status' : 'accepted',
             'pharmacy' : 'Pharmacy2U - Springs, Austhorpe',
-            'items' : 2
+            'requester': 'Leeds Teaching Hospitals',
+            'items' : 1,
+            'medication': [
+                'Codeine Phosphate 60mg in 1mL Solution for Injection'
+            ]
+
         }
         ,
         {
@@ -54,8 +64,12 @@ export class PrescriptionOrdersComponent implements OnInit {
             'nhs_number' : '9382197654',
             'order_number': '783123-ABCDFE-32212',
             'status' : 'requested',
-            'pharmacy' : 'Lloyds - Crossgates',
-            'items' : 1
+            'pharmacy' : '',
+            'requester': 'Dr Smith',
+            'items' : 1,
+            'medication': [
+                'Forceval Capsules'
+            ]
         }
   ]
 

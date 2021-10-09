@@ -32,35 +32,51 @@
             <td mat-cell *matCellDef="let element"> {{element.items}} </td>
         </ng-container>
 
+        <ng-container matColumnDef="medications">
+            <th mat-header-cell *matHeaderCellDef> Medications </th>
+            <td mat-cell *matCellDef="let element">
+                <ul>
+                    <ng-template ngFor let-item [ngForOf]="element.medication" let-i="index" >
+                        <li>{{item}}</li>
+                    </ng-template>
+                </ul>
+            </td>
+        </ng-container>
+
         <ng-container matColumnDef="pharmacy">
             <th mat-header-cell *matHeaderCellDef> Pharmacy </th>
             <td mat-cell *matCellDef="let element"> {{element.pharmacy}} </td>
         </ng-container>
 
+        <ng-container matColumnDef="requester">
+            <th mat-header-cell *matHeaderCellDef> Requester </th>
+            <td mat-cell *matCellDef="let element"> {{element.requester}} </td>
+        </ng-container>
+
         <!-- Symbol Column -->
         <ng-container matColumnDef="order_number">
-            <th mat-header-cell *matHeaderCellDef style.width="200px"> Order No. </th>
+            <th mat-header-cell *matHeaderCellDef > Order No. </th>
             <td mat-cell *matCellDef="let element"> {{element.order_number}} </td>
         </ng-container>
 
         <ng-container matColumnDef="return_order">
-            <th mat-header-cell *matHeaderCellDef> Cancel </th>
+            <th mat-header-cell *matHeaderCellDef [style.width.px]="120"> Cancel </th>
             <td mat-cell *matCellDef="let element">
                 <button color="warn" *ngIf="element.status == 'accepted'" mat-icon-button><mat-icon>remove_shopping_cart</mat-icon>Cancel</button>
             </td>
         </ng-container>
 
         <ng-container matColumnDef="view_order">
-            <th mat-header-cell *matHeaderCellDef> View Order  </th>
+            <th mat-header-cell *matHeaderCellDef [style.width.px]="120"> View Order  </th>
             <td mat-cell *matCellDef="let element">
-                <button color="accent" mat-icon-button routerLink="/details/123453-ABCDFE-12345" matTooltip="Not currently possible. At present you need to call PatientPrescriptionReleaseRequest (POST /Task/$release) to view the order"><mat-icon>inventory</mat-icon>View Details</button>
+                <button color="accent" mat-icon-button routerLink="/details/123453-ABCDFE-12345" ><mat-icon>inventory</mat-icon>View Details</button>
             </td>
         </ng-container>
 
         <ng-container matColumnDef="track_order">
-            <th mat-header-cell *matHeaderCellDef> Track Package  </th>
+            <th mat-header-cell *matHeaderCellDef [style.width.px]="120"> Track Package  </th>
             <td mat-cell *matCellDef="let element">
-                <button color="accent" mat-icon-button routerLink="/details/123453-ABCDFE-12345" matTooltip="Not currently possible. At present you need to call PatientPrescriptionReleaseRequest (POST /Task/$release) to view the order"><mat-icon>local_shipping</mat-icon>Tracking</button>
+                <button color="accent" mat-icon-button routerLink="/details/123453-ABCDFE-12345" ><mat-icon>local_shipping</mat-icon>Tracking</button>
             </td>
         </ng-container>
 
