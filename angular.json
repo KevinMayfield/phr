@@ -130,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "phr"
+  "defaultProject": "phr",
+  "cli": {
+    "analytics": "964cecfc-d7fb-4e12-ac71-8ac08ab3ef89"
+  }
 }
