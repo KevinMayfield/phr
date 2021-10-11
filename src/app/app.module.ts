@@ -27,6 +27,17 @@ import {PrescriptionRefillComponent} from "./prescription-refill/prescription-re
 import {PrescriptionOrderDetailComponent} from "./prescription-order-detail/prescription-order-detail.component";
 import {CovalentMessageModule} from "@covalent/core/message";
 import {PrescriptionOrdersComponent} from "./prescription-orders/prescription-orders.component";
+import {CallbackComponent} from "./callback/callback.component";
+import {AppConfigService} from "./service/app-config.service";
+import {AuthGuard} from "./service/auth-guard";
+import { LoginComponent } from './login/login.component';
+
+
+const appInitializerFn = (appConfig: AppConfigService) => {
+  return () => {
+    return appConfig.loadConfig();
+  };
+};
 
 @NgModule({
   declarations: [
@@ -35,7 +46,9 @@ import {PrescriptionOrdersComponent} from "./prescription-orders/prescription-or
     OrdersComponent,
       PrescriptionRefillComponent,
       PrescriptionOrderDetailComponent,
-      PrescriptionOrdersComponent
+      PrescriptionOrdersComponent,
+      CallbackComponent,
+      LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +77,9 @@ import {PrescriptionOrdersComponent} from "./prescription-orders/prescription-or
     MatTooltipModule,
     MatChipsModule
   ],
-  providers: [],
+  providers: [
+      AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

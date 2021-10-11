@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  oauth2 : {
+    token : 'https://int.api.service.nhs.uk/oauth2-no-smartcard/token',
+    auth : 'https://int.api.service.nhs.uk/oauth2-no-smartcard/authorize',
+    client_id : 'GuaLlFA7m8myuJ66DX2MFVkFg6ttW6OO',
+    client_secret : 'pwNp4KPAxAytk5An',
+    cookie_domain : 'localhost',
+    logonUrl: 'http://localhost:4200/ccri-logon'
+  }
 };
 
 /*
