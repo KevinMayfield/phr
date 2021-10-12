@@ -13,7 +13,7 @@ export class PrescriptionOrdersComponent implements OnInit {
 
 
     datepipe: DatePipe = new DatePipe('en-GB');
-    displayedColumns: string[] = ['authored', 'status', 'requester', 'pharmacy', 'medications', 'order_number', 'return_order', 'view_order', 'track_order'];
+    displayedColumns: string[] = ['authored', 'status', 'requester', 'pharmacy', 'medications', 'order_number',  'view_order', 'track_order'];
 
     dataSource: any;
     data: Task[] = [];

@@ -23,15 +23,16 @@ import {MatCardModule} from "@angular/material/card";
 import {MatList, MatListModule} from "@angular/material/list";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { OrdersComponent } from './orders/orders.component';
-import {PrescriptionRefillComponent} from "./prescription-refill/prescription-refill.component";
+import {PrescriptionRefillComponent} from "./gp-prescriptions/prescription-refill.component";
 import {PrescriptionOrderDetailComponent} from "./prescription-order-detail/prescription-order-detail.component";
 import {CovalentMessageModule} from "@covalent/core/message";
-import {PrescriptionOrdersComponent} from "./prescription-orders/prescription-orders.component";
+import {PrescriptionOrdersComponent} from "./eps-orders/prescription-orders.component";
 import {CallbackComponent} from "./callback/callback.component";
 import {AuthGuard} from "./service/auth-guard";
 import { LoginComponent } from './login/login.component';
 import {CovalentFileModule} from "@covalent/core/file";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {GpDiaryComponent} from "./gp-diary/gp-diary.component";
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
       PrescriptionRefillComponent,
       PrescriptionOrderDetailComponent,
       PrescriptionOrdersComponent,
+      GpDiaryComponent,
       CallbackComponent,
       LoginComponent
   ],

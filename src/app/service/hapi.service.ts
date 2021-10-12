@@ -28,6 +28,28 @@ export class HapiService {
     return this.tasks;
   }
 
+  public queryTasks(): any {
+
+
+    const headers = this.getHeaders();
+    // tslint:disable-next-line:typedef
+    this.http.get(environment.hapi + '/Task?identifier=3C2366-B81001-0A409U,6BC03A-A83008-485BAR,CDF34E-A99968-4FF3BQ', { headers}).subscribe(
+        result => {
+          const bundle = result as Bundle;
+          if (bundle.entry !== undefined && bundle.entry.length > 0) {
+            console.log('Task found.');
+            this.tasks = [];
+            for (const entry of bundle.entry) {
+              this.tasks.push(entry.resource as Task);
+            }
+            this.taskChange.emit({});
+          } else {
+            console.log('Task not found.');
+          }
+        }
+    );
+  }
+
   public convertToTransaction(bundle: Bundle): any {
 
     let newBundle: Bundle = {
@@ -154,27 +176,7 @@ export class HapiService {
     }
   }
 
-  public queryTasks(): any {
 
-
-    const headers = this.getHeaders();
-    // tslint:disable-next-line:typedef
-    this.http.get(environment.hapi + '/Task?identifier=3C2366-B81001-0A409U,6BC03A-A83008-485BAR,CDF34E-A99968-4FF3BQ', { headers}).subscribe(
-        result => {
-          const bundle = result as Bundle;
-          if (bundle.entry !== undefined && bundle.entry.length > 0) {
-            console.log('Task found.');
-            this.tasks = [];
-            for (const entry of bundle.entry) {
-              this.tasks.push(entry.resource as Task);
-            }
-            this.taskChange.emit({});
-          } else {
-            console.log('Task not found.');
-          }
-        }
-    );
-  }
   getHeaders(): HttpHeaders {
 
     let headers = new HttpHeaders(
