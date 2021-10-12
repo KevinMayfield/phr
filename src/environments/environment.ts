@@ -11,7 +11,8 @@ export const environment = {
     client_secret : 'pwNp4KPAxAytk5An',
     cookie_domain : 'localhost',
     logonUrl: 'http://localhost:4200/ccri-logon'
-  }
+  },
+  virtually: 'https://emis-api-lb-test-294292503.eu-west-2.elb.amazonaws.com/R4'
 };
 
 /*

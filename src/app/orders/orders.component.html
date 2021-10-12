@@ -6,4 +6,13 @@
     <app-prescription-orders></app-prescription-orders>
     <app-prescription-refill></app-prescription-refill>
 
+    <br />
+    <div>
+
+        <td-file-input [(ngModel)]="files" color="primary" (select)="selectEvent($event)"
+                       accept=".json,.xml" [disabled]="disabled" multiple>
+            <mat-icon>attach_file</mat-icon><span>Choose a FHIR Bundle file...</span>
+        </td-file-input>
+
+    </div>
 </mat-card>

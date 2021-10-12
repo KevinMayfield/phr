@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  opened=false;
+  opened = false;
   constructor() { }
 
   ngOnInit(): void {

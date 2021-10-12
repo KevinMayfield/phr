@@ -27,8 +27,8 @@ export class CallbackComponent implements OnInit {
     );
     this.route.queryParamMap.subscribe(params => {
       console.log(params);
-      var code = params.get('code');
-      var state = params.get('state');
+      const code = params.get('code');
+      // var state = params.get('state');
       this.auth.performGetAccessToken(code);
     });
 

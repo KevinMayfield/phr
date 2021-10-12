@@ -30,6 +30,8 @@ import {PrescriptionOrdersComponent} from "./prescription-orders/prescription-or
 import {CallbackComponent} from "./callback/callback.component";
 import {AuthGuard} from "./service/auth-guard";
 import { LoginComponent } from './login/login.component';
+import {CovalentFileModule} from "@covalent/core/file";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -43,33 +45,36 @@ import { LoginComponent } from './login/login.component';
       CallbackComponent,
       LoginComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FlexLayoutModule,
-    BrowserAnimationsModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FlexLayoutModule,
+        BrowserAnimationsModule,
 
-    CovalentLayoutModule,
-    CovalentStepsModule,
-    // (optional) Additional Covalent Modules imports
-    CovalentHttpModule.forRoot(),
-    CovalentHighlightModule,
-    CovalentMarkdownModule,
-    CovalentDynamicFormsModule,
-    CovalentBaseEchartsModule,
-    CovalentMessageModule,
+        CovalentLayoutModule,
+        CovalentStepsModule,
+        // (optional) Additional Covalent Modules imports
+        CovalentHttpModule.forRoot(),
+        CovalentHighlightModule,
+        CovalentMarkdownModule,
+        CovalentDynamicFormsModule,
+        CovalentBaseEchartsModule,
+        CovalentMessageModule,
 
 
-    MatIconModule,
-    MatButtonModule,
-    CovalentDataTableModule,
-    MatMenuModule,
-    MatListModule,
-    MatCardModule,
-    MatTableModule,
-    MatTooltipModule,
-    MatChipsModule
-  ],
+        MatIconModule,
+        MatButtonModule,
+        CovalentDataTableModule,
+        MatMenuModule,
+        MatListModule,
+        MatCardModule,
+        MatTableModule,
+        MatTooltipModule,
+        MatChipsModule,
+        CovalentFileModule,
+        ReactiveFormsModule,
+        FormsModule
+    ],
   providers: [
       AuthGuard
   ],
