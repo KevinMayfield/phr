@@ -9,7 +9,7 @@ import {AuthService} from '../service/auth.service';
 })
 export class CallbackComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute,
+  constructor(private route: ActivatedRoute,
               private auth: AuthService,
               private router: Router) { }
 
@@ -19,13 +19,19 @@ export class CallbackComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
-    this.authCode = this.activatedRoute.snapshot.queryParams.code;
 
-    console.log(this.authCode);
-    if (this.authCode !== undefined) {
-    }
-    // this.router.navigate(['']);
-    this.auth.performGetAccessToken(this.authCode);
+    this.auth.tokenChange.subscribe(
+        () => {
+          this.router.navigateByUrl('/');
+        }
+    );
+    this.route.queryParamMap.subscribe(params => {
+      console.log(params);
+      var code = params.get('code');
+      var state = params.get('state');
+      this.auth.performGetAccessToken(code);
+    });
+
   }
 
 }

@@ -28,16 +28,9 @@ import {PrescriptionOrderDetailComponent} from "./prescription-order-detail/pres
 import {CovalentMessageModule} from "@covalent/core/message";
 import {PrescriptionOrdersComponent} from "./prescription-orders/prescription-orders.component";
 import {CallbackComponent} from "./callback/callback.component";
-import {AppConfigService} from "./service/app-config.service";
 import {AuthGuard} from "./service/auth-guard";
 import { LoginComponent } from './login/login.component';
 
-
-const appInitializerFn = (appConfig: AppConfigService) => {
-  return () => {
-    return appConfig.loadConfig();
-  };
-};
 
 @NgModule({
   declarations: [

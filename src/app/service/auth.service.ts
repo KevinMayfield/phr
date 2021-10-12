@@ -10,11 +10,15 @@ import {Router} from '@angular/router';
 class Oauth2token {
 }
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class AuthService {
     private smartToken: Oauth2token | undefined;
 
-    oauthTokenChange: EventEmitter<Oauth2token> = new EventEmitter();
+    private accessToken = undefined;
+
+    tokenChange: EventEmitter<Oauth2token> = new EventEmitter();
 
    public auth = false;
 
@@ -25,33 +29,38 @@ export class AuthService {
 
   }
 
-  performGetAccessToken(authCode: string ): any {
+    performGetAccessToken(authCode: string | null): any {
+
+      // https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation/user-restricted-restful-apis-nhs-cis2-combined-authentication-and-authorisation
+
     const bearerToken = 'Basic ' + btoa(environment.oauth2.client_id + ':' + environment.oauth2.client_secret);
-    const headers = new HttpHeaders( { Authorization : bearerToken});
-    // headers = headers.append('Content-Type', 'application/x-www-form-urlencoded');
+    let headers = new HttpHeaders( { 'Content-Type': 'application/x-www-form-urlencoded'});
 
     const url = environment.oauth2.token;
 
-    const body = new URLSearchParams();
-    body.set('grant_type', 'authorization_code');
-    body.set('code', authCode);
-    body.set('redirect_uri', document.baseURI + '/callback');
 
+    const urlParams = new URLSearchParams(
+            {'grant_type': 'authorization_code'});
 
-    this.postAny(url, body.toString(),  headers  ).subscribe( (response: string) => {
+    urlParams.append('client_id', environment.oauth2.client_id),
+    urlParams.append(  'client_secret', environment.oauth2.client_secret);
+    urlParams.append(  'redirect_uri', document.baseURI+'callback');
+    if (typeof authCode === "string") {
+        urlParams.append('code', authCode);
+    }
+
+    this.postAny(url, urlParams.toString(),  headers  ).subscribe( (token: any) => {
         // console.log(response);
-        this.smartToken = response;
-        console.log('OAuth2Token : ' + response);
-        this.auth = true;
-      }
+        this.smartToken = token;
+        console.log('OAuth2Token : ' + token);
+        this.setAccessToken(token);
+
+        }
       , (error: any) => {
         console.log(error);
       }
       , () => {
         // Emit event
-
-        this.oauthTokenChange.emit(this.smartToken);
-
       }
     );
   }
@@ -59,5 +68,25 @@ export class AuthService {
     // tslint:disable-next-line:typedef
     public postAny(url: string | null, body: string, httpHeaders: HttpHeaders) {
         return this.http.post<any>(url as string, body, {headers: httpHeaders});
+    }
+
+    setAccessToken(token: { expires_at: any; expires_in: number; access_token: any; }) {
+        var date = new Date
+        // Create an expires at ..... don't know when we got the token
+        token.expires_at = Math.round((new Date().valueOf())/1000) + token.expires_in;
+        localStorage.setItem('nhsdToken', JSON.stringify(token));
+        this.accessToken = token.access_token;
+        this.tokenChange.emit(token);
+    }
+    public hasAccessToken() : boolean {
+
+        if (this.accessToken !== undefined) return true;
+        return false;
+    }
+
+
+    private deleteAccessToken() {
+        this.accessToken = undefined;
+        localStorage.removeItem('nhsdToken');
     }
 }

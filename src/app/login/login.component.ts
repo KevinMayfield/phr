@@ -9,7 +9,7 @@ import {environment} from '../../environments/environment';
 export class LoginComponent implements OnInit {
 
   constructor() { }
-  callback = 'http://localhost:4200/callback';
+  callback = document.baseURI + 'callback';
 
 
   ngOnInit(): void {
