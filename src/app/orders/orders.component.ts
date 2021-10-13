@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit} from '@angular/core';
-import {Bundle} from "fhir/r4";
-import {NhsdService} from "../service/nhsd.service";
+import {Bundle} from 'fhir/r4';
+import {NhsdService} from '../service/nhsd.service';
 
 
 @Component({

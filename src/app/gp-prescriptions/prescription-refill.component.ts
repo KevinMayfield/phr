@@ -4,8 +4,6 @@ import {FhirService} from '../service/FhirService';
 import {MedicationRequest} from 'fhir/r4';
 import {DatePipe} from '@angular/common';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
-import {PrescriptionOrderDetailComponent} from "../prescription-order-detail/prescription-order-detail.component";
-import {RefillComponent} from "../refill/refill.component";
 import {TdDialogService, TdPromptDialogComponent} from "@covalent/core/dialogs";
 
 @Component({

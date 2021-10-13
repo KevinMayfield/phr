@@ -103,6 +103,7 @@ export class NhsdService {
             task.authoredOn = medicationRequest.authoredOn;
             if (medicationRequest.dispenseRequest !== undefined && medicationRequest.dispenseRequest.performer !== undefined) {
                 task.owner = medicationRequest.dispenseRequest.performer;
+                task.status = 'requested';
             }
             const input = {
               type: {
