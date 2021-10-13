@@ -16,7 +16,7 @@ import {AuthService} from "./auth.service";
 @Injectable({
   providedIn: 'root'
 })
-export class HapiService {
+export class NhsdService {
 
   medicationChange: EventEmitter<any> = new EventEmitter();
   constructor(private http: HttpClient) { }
@@ -33,14 +33,16 @@ export class HapiService {
 
     const headers = this.getHeaders();
     // tslint:disable-next-line:typedef
-    this.http.get(environment.hapi + '/Task?identifier=3C2366-B81001-0A409U,6BC03A-A83008-485BAR,CDF34E-A99968-4FF3BQ', { headers}).subscribe(
+    this.http.get(environment.nhsd + '/Task?patient.identifier=9453740519', { headers}).subscribe(
         result => {
           const bundle = result as Bundle;
           if (bundle.entry !== undefined && bundle.entry.length > 0) {
             console.log('Task found.');
             this.tasks = [];
             for (const entry of bundle.entry) {
-              this.tasks.push(entry.resource as Task);
+              if (entry.resource?.resourceType === 'Task') {
+                this.tasks.push(entry.resource as Task);
+              }
             }
             this.taskChange.emit({});
           } else {
@@ -57,7 +59,7 @@ export class HapiService {
       type : 'transaction',
       entry : []
     };
-    let task: Task = {
+    let task: any = {
       resourceType : 'Task',
       status: 'ready',
       intent: 'order',
@@ -74,15 +76,15 @@ export class HapiService {
     };
     let prescriptionorder = false;
     if (bundle.entry !== undefined && bundle.entry.length > 0) {
-      let practitionerRole = '';
+      let practitionerRole: string | undefined = '';
       for (const entry of bundle.entry) {
-          const resource = entry.resource as DomainResource;
-          if (resource.resourceType === 'Patient') {
+          const resource = entry.resource as any;
+          if (resource?.resourceType === 'Patient') {
               task.for = {
                 reference : entry.fullUrl
               };
           }
-        if (resource.resourceType === 'MessageHeader' ) {
+        if (resource?.resourceType === 'MessageHeader' ) {
           console.log('MessageHeader');
           const medicationHeader = resource as MessageHeader;
           if (medicationHeader.eventCoding?.code === 'prescription-order') {
@@ -90,8 +92,8 @@ export class HapiService {
           }
         }
         // tslint:disable-next-line:no-conditional-assignment
-          if ((resource.resourceType === 'MedicationRequest') ) {
-            const medicationRequest = resource as MedicationRequest;
+          if ((resource?.resourceType === 'MedicationRequest') ) {
+            const medicationRequest = resource as any;
             if (task.identifier === undefined) {
               task.identifier = [];
               task.identifier.push(medicationRequest.groupIdentifier as Identifier);
@@ -115,17 +117,17 @@ export class HapiService {
               valueReference: {
                 type: 'MedicationRequest',
                 reference: entry.fullUrl,
-                display: medicationRequest.medicationCodeableConcept.coding[0].display
+                display: medicationRequest?.medicationCodeableConcept?.coding[0].display
               }
             };
             task.input?.push(input);
           }
-          if (resource.identifier !== undefined) {
+          if (resource?.identifier !== undefined) {
               let identifier = '';
-              if (resource.identifier.length !== undefined) {
-                identifier = this.getIdentifier(resource.identifier[0]);
+              if (resource?.identifier.length !== undefined) {
+                identifier = this.getIdentifier(resource?.identifier[0]);
               } else {
-                identifier = this.getIdentifier(resource.identifier);
+                identifier = this.getIdentifier(resource?.identifier);
               }
               // @ts-ignore
               entry.request = {
@@ -145,8 +147,11 @@ export class HapiService {
             const resource = entry.resource as DomainResource;
 
             if (resource.resourceType === 'PractitionerRole') {
-                task.requester.display = (resource as PractitionerRole).practitioner.display;
-                if (task.requester.display === undefined) {
+                // @ts-ignore
+              task.requester.display = (resource as PractitionerRole).practitioner.display;
+                // @ts-ignore
+              if (task.requester.display === undefined) {
+                  // @ts-ignore
                   task.requester.display = (resource as PractitionerRole).identifier[0].value;
                 }
             }
@@ -154,6 +159,7 @@ export class HapiService {
         }
       }
       console.log(task);
+      // @ts-ignore
       const entry: BundleEntry = {
         resource : task,
         request : {
@@ -165,7 +171,7 @@ export class HapiService {
         newBundle.entry?.push(entry);
       }
       console.log(newBundle);
-      this.http.post('http://hapi.fhir.org/baseR4', JSON.stringify(newBundle), { headers: this.getHeaders() }).subscribe(
+      this.http.post(environment.nhsd, JSON.stringify(newBundle), { headers: this.getHeaders() }).subscribe(
           (result) => {
             console.log('done post to hapi');
             console.log(result);
@@ -191,7 +197,7 @@ export class HapiService {
     if (identifier.system !== undefined) {
       return identifier.system + '|' + identifier.value;
     } else {
-      return identifier.value;
+      return <string>identifier.value;
     }
   }
 }

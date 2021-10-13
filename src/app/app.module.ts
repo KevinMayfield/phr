@@ -33,6 +33,8 @@ import { LoginComponent } from './login/login.component';
 import {CovalentFileModule} from "@covalent/core/file";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {GpDiaryComponent} from "./gp-diary/gp-diary.component";
+import {CovalentDialogsModule} from "@covalent/core/dialogs";
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -41,11 +43,11 @@ import {GpDiaryComponent} from "./gp-diary/gp-diary.component";
     MainComponent,
     OrdersComponent,
       PrescriptionRefillComponent,
-      PrescriptionOrderDetailComponent,
       PrescriptionOrdersComponent,
       GpDiaryComponent,
       CallbackComponent,
-      LoginComponent
+      LoginComponent,
+      PrescriptionOrderDetailComponent
   ],
     imports: [
         BrowserModule,
@@ -62,7 +64,7 @@ import {GpDiaryComponent} from "./gp-diary/gp-diary.component";
         CovalentDynamicFormsModule,
         CovalentBaseEchartsModule,
         CovalentMessageModule,
-
+        CovalentDialogsModule,
 
         MatIconModule,
         MatButtonModule,
@@ -75,7 +77,11 @@ import {GpDiaryComponent} from "./gp-diary/gp-diary.component";
         MatChipsModule,
         CovalentFileModule,
         ReactiveFormsModule,
-        FormsModule
+        FormsModule,
+        MatDialogModule
+    ],
+    entryComponents: [
+        PrescriptionOrderDetailComponent,
     ],
   providers: [
       AuthGuard

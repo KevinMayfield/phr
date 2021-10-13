@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit, ViewContainerRef} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
+import {TdDialogService} from "@covalent/core/dialogs";
+import {DOCUMENT} from "@angular/common";
 
 @Component({
   selector: 'app-prescription-order-detail',
@@ -8,25 +10,10 @@ import {MatTableDataSource} from "@angular/material/table";
 })
 export class PrescriptionOrderDetailComponent implements OnInit {
 
-  basicMarkdown: string = `
 
-   It's not possible to do this at present. 
-   
-   Based on prescription short form I should be able to retrieve the prescription (ParentPrescription).
-   
-   As FHIR this would be something like 
-   
-   - **GET /Bundle?message.group-identifier={prescription-short-form}**
-   
-   It is similar to **PatientPrescriptionReleaseRequest** without the release action. 
-   
-   The **prescription-order-update** action is applicable here to cancel individual items.
-    
- `;
+    displayedColumns: string[] = ['concept', 'name', 'quantity', 'unit'];
 
-    displayedColumns: string[] = ['concept', 'name', 'quantity', 'unit', 'cancel_medication'];
-
-    displayedDispenseColumns: string[] = ['prepared','concept', 'name', 'quantity', 'status', 'cancel_dispense'];
+    displayedDispenseColumns: string[] = ['prepared','concept', 'name', 'quantity', 'status'];
 
     dataSource : any;
     dispenseDataSource : any;
@@ -75,8 +62,11 @@ export class PrescriptionOrderDetailComponent implements OnInit {
 
                 }
                 ]
+    closed: any;
 
-  constructor() { }
+  constructor(private _dialogService: TdDialogService,
+              private _viewContainerRef: ViewContainerRef
+              ) { }
 
   ngOnInit(): void {
       this.dataSource = new MatTableDataSource <any>(this.data);

@@ -1,23 +1,6 @@
-<mat-card>
-    <mat-card-header>
-        <h2>Prescription Detail</h2>
-    </mat-card-header>
-    <mat-chip>
-        FHIR Bundle
-    </mat-chip>
-    <td-message label="Error" sublabel="It is not possible to do this in EPS, except for the cancel operations" color="warn" icon="error"></td-message>
 
-    <td-markdown>{{ basicMarkdown }}</td-markdown>
-
-    <div layout="row" layout-align=" center" flex>
-        <button mat-raised-button matTooltip="Only possible if the status of the order is accepted or requested. This calls DispenseProposalReturn (POST /Task)"><mat-icon>assignment_return</mat-icon>Return Order</button>
-
-        <button mat-raised-button matTooltip="Only possible if the status of the order requested. This calls ParentPrescriptionReleaseRequest (POST /Task/$release)"><mat-icon>assignment</mat-icon>Accept</button>
-    </div>
-
-    This section should render the full prescription.
-
-    <table mat-table [dataSource]="dataSource"  width="100%">
+<mat-dialog-content>
+<table mat-table [dataSource]="dataSource" >
 
         <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
@@ -59,7 +42,7 @@
     <h2>Tracking / Dispensing History</h2>
     Would make sense to list the dispense history here.
 
-    <table mat-table [dataSource]="dispenseDataSource"  width="100%">
+    <table mat-table [dataSource]="dispenseDataSource">
 
         <ng-container matColumnDef="prepared">
             <th mat-header-cell *matHeaderCellDef> Dispensed </th>
@@ -99,4 +82,12 @@
         <tr mat-header-row *matHeaderRowDef="displayedDispenseColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedDispenseColumns;"></tr>
     </table>
-</mat-card>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+</mat-dialog-actions>
+
+
+
+

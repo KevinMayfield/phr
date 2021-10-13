@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit} from '@angular/core';
 import {Bundle} from "fhir/r4";
-import {HapiService} from "../service/hapi.service";
+import {NhsdService} from "../service/nhsd.service";
 
 
 @Component({
@@ -14,7 +14,7 @@ export class OrdersComponent implements OnInit {
   disabled = false;
 
   constructor(
-      private hapi: HapiService
+      private hapi: NhsdService
   ) { }
 
   ngOnInit(): void {

@@ -11,7 +11,7 @@
     <div>
 
         <td-file-input [(ngModel)]="files" color="primary" (select)="selectEvent($event)"
-                       accept=".json,.xml" [disabled]="disabled" multiple>
+                       accept=".json,.xml">
             <mat-icon>attach_file</mat-icon><span>Choose a FHIR Bundle file...</span>
         </td-file-input>
 

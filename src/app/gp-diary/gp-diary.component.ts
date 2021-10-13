@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
-import {HapiService} from '../service/hapi.service';
 import {Task} from 'fhir/r4';
 import {DatePipe} from "@angular/common";
 import {FhirService} from "../service/FhirService";
