@@ -1,11 +1,15 @@
 export const environment = {
   production: true,
   oauth2 : {
-    eprUrl : 'http://localhost:8186/ccri-fhir/STU3',
-    client_id : 'nhs-smart-ehr',
-    client_secret : 'APa5oCe6SHhty_or2q34WpNcq0-X957n6p48TkAJw14YCtmZeQil60XvCfuByIPd8DlXyusxAGxp5_Z5UKlgZJU',
+    token : 'https://int.api.service.nhs.uk/oauth2-no-smartcard/token',
+    auth : 'https://int.api.service.nhs.uk/oauth2-no-smartcard/authorize',
+    client_id : 'GuaLlFA7m8myuJ66DX2MFVkFg6ttW6OO',
+    client_secret : 'pwNp4KPAxAytk5An',
     cookie_domain : 'localhost',
     logonUrl: 'http://localhost:4200/ccri-logon'
-  }
-
+  },
+  virtually: 'https://emis-api-lb-test-294292503.eu-west-2.elb.amazonaws.com/R4',
+  nhsd: 'https://server.fire.ly/r4',
+  hapibase: 'http://hapi.fhir.org/baseR4',
+  firelybase : 'https://server.fire.ly/r4'
 };
