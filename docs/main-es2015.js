@@ -1883,7 +1883,7 @@ class GpDiaryComponent {
         const matDialogRef = this._dialogService.openPrompt({
             title: 'Diary Entry (FHIR Task)',
             message: 'Use this to add Tasks (Diary Entries) to GP workflow',
-            value: 'Asthma Medication Review () - Had an asthma attack and LTH ED advised my asthma medication needed reviewing.',
+            value: 'Asthma Medication Review',
             cancelButton: 'Cancel',
             acceptButton: 'Ok',
         });
