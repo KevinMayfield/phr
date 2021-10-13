@@ -3,6 +3,8 @@ import {MatTableDataSource} from '@angular/material/table';
 import {Task} from 'fhir/r4';
 import {DatePipe} from "@angular/common";
 import {FhirService} from "../service/FhirService";
+import {MatDialog} from "@angular/material/dialog";
+import {TdDialogService} from "@covalent/core/dialogs";
 
 @Component({
   selector: 'app-gp-diary',
@@ -19,7 +21,9 @@ export class GpDiaryComponent implements OnInit {
     data: Task[] = [];
 
 
-  constructor(private fhir: FhirService
+  constructor(private fhir: FhirService,
+              private dialog: MatDialog,
+              private _dialogService: TdDialogService
   ) { }
 
   ngOnInit(): void {
@@ -27,6 +31,18 @@ export class GpDiaryComponent implements OnInit {
      this.fhir.queryTasks();
      this.fhir.taskChange.subscribe(() => {
           this.dataSource = new MatTableDataSource(this.fhir.getTasks());
+      });
+  }
+  diary(): void {
+      const matDialogRef = this._dialogService.openPrompt({
+          title: 'Diary Entry (FHIR Task)',
+          message: 'Use this to add Tasks (Diary Entries) to GP workflow',
+          value: 'Asthma Medication Review () - Had an asthma attack and LTH ED advised my asthma medication needed reviewing.',
+          cancelButton: 'Cancel',
+          acceptButton: 'Ok',
+      });
+      matDialogRef.afterClosed().subscribe(result => {
+          console.log(matDialogRef.componentInstance.value);
       });
   }
 

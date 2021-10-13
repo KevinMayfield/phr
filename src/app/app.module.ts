@@ -35,6 +35,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {GpDiaryComponent} from "./gp-diary/gp-diary.component";
 import {CovalentDialogsModule} from "@covalent/core/dialogs";
 import {MatDialogModule} from '@angular/material/dialog';
+import { RefillComponent } from './refill/refill.component';
+import { GpTaskComponent } from './gp-task/gp-task.component';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import {MatDialogModule} from '@angular/material/dialog';
       GpDiaryComponent,
       CallbackComponent,
       LoginComponent,
-      PrescriptionOrderDetailComponent
+      PrescriptionOrderDetailComponent,
+      RefillComponent,
+      GpTaskComponent
   ],
     imports: [
         BrowserModule,
@@ -82,6 +86,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     ],
     entryComponents: [
         PrescriptionOrderDetailComponent,
+        RefillComponent
     ],
   providers: [
       AuthGuard

@@ -21,7 +21,8 @@ export class PrescriptionOrdersComponent implements OnInit {
     data: Task[] = [];
 
 
-  constructor(private hapi: NhsdService,public dialog: MatDialog) { }
+  constructor(private hapi: NhsdService,
+              private dialog: MatDialog) { }
 
   ngOnInit(): void {
      this.dataSource = new MatTableDataSource <any>(this.data);
@@ -31,7 +32,7 @@ export class PrescriptionOrdersComponent implements OnInit {
       });
   }
 
-  view(resource: any) {
+  view(resource: any): void {
       const dialogConfig = new MatDialogConfig();
 
       dialogConfig.disableClose = true;
