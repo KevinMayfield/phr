@@ -1,6 +1,8 @@
 import {Component, EventEmitter, OnInit} from '@angular/core';
-import {Bundle} from 'fhir/r4';
+import {Bundle, OperationOutcome} from 'fhir/r4';
 import {NhsdService} from '../service/nhsd.service';
+import {MatDialog} from "@angular/material/dialog";
+import {TdDialogService} from "@covalent/core/dialogs";
 
 
 @Component({
@@ -14,10 +16,29 @@ export class OrdersComponent implements OnInit {
   disabled = false;
 
   constructor(
-      private hapi: NhsdService
+      private nhsd: NhsdService,
+      private dialog: MatDialog,
+      private _dialogService: TdDialogService
   ) { }
 
   ngOnInit(): void {
+    this.nhsd.error.subscribe(
+        (error: OperationOutcome) => {
+          console.log(error);
+           const operationOutcome = error as OperationOutcome;
+           console.log(operationOutcome.issue[0].details?.text);
+          // @ts-ignore
+            const msg :string = operationOutcome.issue[0].details?.text;
+          // @ts-ignore
+            const matDialogRef = this._dialogService.openAlert({
+            title: 'Error',
+            message: msg
+          });
+          matDialogRef.afterClosed().subscribe(result => {
+            //console.log(matDialogRef.componentInstance.value);
+          });
+        }
+    )
   }
 
   // https://stackoverflow.com/questions/40214772/file-upload-in-angular
@@ -33,7 +54,7 @@ export class OrdersComponent implements OnInit {
       fileReader.onloadend = (e) => {
         if (typeof fileReader.result === 'string') {
           const bundle = JSON.parse(fileReader.result) as Bundle;
-          this.hapi.convertToTransaction(bundle);
+          this.nhsd.convertToTransaction(bundle);
         }
       };
       fileReader.readAsText(file);

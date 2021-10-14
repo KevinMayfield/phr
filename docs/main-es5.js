@@ -23,7 +23,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! C:\Development\kevinmayfield\phr\src\main.ts */
+      /*! /Users/kevinmayfield/github/phr/src/main.ts */
       "zUnb");
       /***/
     },
@@ -62,201 +62,63 @@
       /* harmony import */
 
 
-      var _covalent_core_dialogs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! @covalent/core/dialogs */
-      "18Cx");
-      /* harmony import */
-
-
-      var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/material/dialog */
       "0IaG");
       /* harmony import */
 
 
-      var _angular_material_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/common */
+      "ofXK");
+      /* harmony import */
+
+
+      var _covalent_core_dialogs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @covalent/core/dialogs */
+      "18Cx");
+      /* harmony import */
+
+
+      var _service_nhsd_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ../service/nhsd.service */
+      "nLgJ");
+      /* harmony import */
+
+
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/material/button */
       "bTqV");
       /* harmony import */
 
 
-      var _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @angular/material/tooltip */
       "Qu3c");
       /* harmony import */
 
 
-      var _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! @angular/material/icon */
       "NFeN");
 
-      function PrescriptionOrderDetailComponent_th_3_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_th_5_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Medication ID ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_td_4_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 15);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Authored ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var element_r26 = ctx.$implicit;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r26.concept, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("width", 120, "px");
         }
       }
 
-      function PrescriptionOrderDetailComponent_th_6_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_td_6_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 14);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Medication Name ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_td_7_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 15);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var element_r27 = ctx.$implicit;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r27.name, " ");
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_th_9_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 14);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Quantity ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_td_10_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 15);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var element_r28 = ctx.$implicit;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r28.quantity, " ");
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_th_12_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 14);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Unit ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_td_13_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 15);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var element_r29 = ctx.$implicit;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r29.unit, " ");
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_th_15_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 14);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Cancel ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_td_16_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 15);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 16);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-icon");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "assignment_return");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Cancel Item");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_tr_17_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 17);
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_tr_18_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 18);
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_th_24_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 14);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Dispensed ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-      }
-
-      function PrescriptionOrderDetailComponent_td_25_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -266,15 +128,17 @@
         if (rf & 2) {
           var element_r32 = ctx.$implicit;
 
+          var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r32.prepared, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r1.datepipe.transform(element_r32.authoredOn, "dd MMM yyyy"), " ");
         }
       }
 
-      function PrescriptionOrderDetailComponent_th_27_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_th_8_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Medication ID ");
 
@@ -282,9 +146,9 @@
         }
       }
 
-      function PrescriptionOrderDetailComponent_td_28_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_td_9_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -300,19 +164,23 @@
         }
       }
 
-      function PrescriptionOrderDetailComponent_th_30_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_th_11_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Medication Name ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Dose ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("width", 300, "px");
+        }
       }
 
-      function PrescriptionOrderDetailComponent_td_31_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_td_12_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -324,23 +192,27 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r34.name, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r34.dosageInstruction[0].text, " ");
         }
       }
 
-      function PrescriptionOrderDetailComponent_th_33_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_th_14_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Quantity ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Medication Name ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("width", 300, "px");
+        }
       }
 
-      function PrescriptionOrderDetailComponent_td_34_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_td_15_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -352,23 +224,23 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r35.quantity, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r35.medicationCodeableConcept.coding[0].display, " ");
         }
       }
 
-      function PrescriptionOrderDetailComponent_th_36_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_th_17_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Status ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Quantity ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
       }
 
-      function PrescriptionOrderDetailComponent_td_37_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_td_18_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -380,13 +252,277 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r36.status, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r36.dispenseRequest.quantity.value, " ");
         }
       }
 
-      function PrescriptionOrderDetailComponent_th_39_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_th_20_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Unit ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_td_21_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var element_r37 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r37.dispenseRequest.quantity.unit, " ");
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_tr_22_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 19);
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_tr_23_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 20);
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_th_28_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Prepared ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("width", 140, "px");
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_td_29_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var element_r39 = ctx.$implicit;
+
+          var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r15.datepipe.transform(element_r39.whenPrepared, "dd MMM yyyy HH:mm"), " ");
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_th_31_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Medication ID ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_td_32_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var element_r40 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r40.concept, " ");
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_th_34_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Pharmacy ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_td_35_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var item_r43 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r43.actor.display);
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_td_35_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "ul");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, PrescriptionOrderDetailComponent_td_35_ng_template_2_Template, 2, 1, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var element_r41 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", element_r41.performer);
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_th_37_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Medication Name ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_td_38_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var element_r45 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r45.medicationCodeableConcept.coding[0].display, " ");
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_th_40_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Quantity ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_td_41_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var element_r46 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r46.quantity.value, " ");
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_th_43_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Unit ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_td_44_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var element_r47 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r47.quantity.unit, " ");
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_th_46_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Status ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_td_47_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var element_r48 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r48.status, " ");
+        }
+      }
+
+      function PrescriptionOrderDetailComponent_th_49_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Cancel ");
 
@@ -394,11 +530,11 @@
         }
       }
 
-      function PrescriptionOrderDetailComponent_td_40_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_td_50_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 18);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 19);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 22);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-icon");
 
@@ -414,69 +550,74 @@
         }
       }
 
-      function PrescriptionOrderDetailComponent_tr_41_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_tr_51_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 19);
         }
       }
 
-      function PrescriptionOrderDetailComponent_tr_42_Template(rf, ctx) {
+      function PrescriptionOrderDetailComponent_tr_52_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 18);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 20);
         }
       }
 
       var PrescriptionOrderDetailComponent = /*#__PURE__*/function () {
-        function PrescriptionOrderDetailComponent(_dialogService, _viewContainerRef) {
+        function PrescriptionOrderDetailComponent(_dialogService, nhsd, _viewContainerRef, task) {
           _classCallCheck(this, PrescriptionOrderDetailComponent);
 
           this._dialogService = _dialogService;
+          this.nhsd = nhsd;
           this._viewContainerRef = _viewContainerRef;
-          this.displayedColumns = ['concept', 'name', 'quantity', 'unit'];
-          this.displayedDispenseColumns = ['prepared', 'concept', 'name', 'quantity', 'status'];
-          this.data = [{
-            'concept': '322237000',
-            'name': 'Paracetamol 500mg soluble tablets',
-            'quantity': '100',
-            'unit': 'tablet'
-          }, {
-            'concept': '35936511000001108',
-            'name': 'Salbutamol 100micrograms/dose inhaler',
-            'quantity': '200',
-            'unit': 'dose'
-          }];
-          this.dispensedata = [{
-            'prepared': '2020-06-10T16:30:00+00:00',
-            'concept': '1858411000001101',
-            'name': 'Paracetamol 500mg soluble tablets (Unichem Plc)',
-            'quantity': '60 tablets',
-            'status': '0003 (Partial)'
-          }, {
-            'prepared': '2020-06-10T16:30:00+00:00',
-            'concept': '3416211000001106',
-            'name': 'Salbutamol 100micrograms/dose inhaler (Sandoz Ltd)',
-            'quantity': '200 dose',
-            'status': '0001 (Dispensed)'
-          }, {
-            'prepared': '2020-06-25T15:30:00+00:00',
-            'concept': '915611000001105',
-            'name': 'Paracetamol 500mg soluble tablets (AAH Pharmaceuticals Ltd)',
-            'quantity': '24 tablets',
-            'status': '0003 (Partial)'
-          }, {
-            'prepared': '2020-06-25T15:30:00+00:00',
-            'concept': '2274211000001101',
-            'name': 'Paracetamol 500mg soluble tablets (Kent Pharmaceuticals)',
-            'quantity': '16 tablets',
-            'status': '0001 (Dispensed)'
-          }];
+          this.task = task;
+          this.displayedColumns = ['authored', 'name', 'dosage', 'quantity', 'unit'];
+          this.displayedDispenseColumns = ['prepared', 'performer', 'name', 'quantity', 'unit'];
+          this.datepipe = new _angular_common__WEBPACK_IMPORTED_MODULE_3__["DatePipe"]('en-GB');
+          this.prescription = [];
+          this.dispense = [];
         }
 
         _createClass(PrescriptionOrderDetailComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](this.data);
-            this.dispenseDataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](this.dispensedata);
+            var _this = this;
+
+            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](this.prescription);
+            this.dispenseDataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](this.dispense);
+            this.nhsd.medicationRequest.subscribe(function (medicationRequest) {
+              _this.prescription.push(medicationRequest);
+
+              _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](_this.prescription);
+            });
+            this.nhsd.medicationDispense.subscribe(function (medicationDispense) {
+              console.log(medicationDispense);
+
+              _this.dispense.push(medicationDispense);
+
+              _this.dispenseDataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](_this.dispense);
+            });
+            var nTask = this.task.resource;
+
+            if (nTask.input !== undefined && nTask.input.length > 0) {
+              var _iterator = _createForOfIteratorHelper(nTask.input),
+                  _step;
+
+              try {
+                for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                  var taskInput = _step.value;
+
+                  if (taskInput.valueReference !== undefined && taskInput.valueReference.reference !== undefined) {
+                    console.log(taskInput.valueReference.display);
+                    this.nhsd.getMedicationRequest(taskInput.valueReference.reference);
+                    this.nhsd.getMedicationDispense(taskInput.valueReference.reference);
+                  }
+                }
+              } catch (err) {
+                _iterator.e(err);
+              } finally {
+                _iterator.f();
+              }
+            }
           }
         }]);
 
@@ -484,138 +625,166 @@
       }();
 
       PrescriptionOrderDetailComponent.ɵfac = function PrescriptionOrderDetailComponent_Factory(t) {
-        return new (t || PrescriptionOrderDetailComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_covalent_core_dialogs__WEBPACK_IMPORTED_MODULE_2__["TdDialogService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]));
+        return new (t || PrescriptionOrderDetailComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_covalent_core_dialogs__WEBPACK_IMPORTED_MODULE_4__["TdDialogService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_service_nhsd_service__WEBPACK_IMPORTED_MODULE_5__["NhsdService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]));
       };
 
       PrescriptionOrderDetailComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: PrescriptionOrderDetailComponent,
         selectors: [["app-prescription-order-detail"]],
-        decls: 46,
+        decls: 56,
         vars: 6,
-        consts: [["mat-table", "", 3, "dataSource"], ["matColumnDef", "concept"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "quantity"], ["matColumnDef", "unit"], ["matColumnDef", "cancel_medication"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matColumnDef", "prepared"], ["matColumnDef", "status"], ["matColumnDef", "cancel_dispense"], ["mat-button", "", "mat-dialog-close", ""], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-icon-button", "", "matTooltip", "This is the prescription-order-update message to /$process-message endpoint. Only valid currently for prescriber"], ["mat-header-row", ""], ["mat-row", ""], ["mat-icon-button", "", "matTooltip", "This is the ETPWithdrawal interaction. Does not map well to FHIR "]],
+        consts: [["mat-table", "", 3, "dataSource"], ["matColumnDef", "authored"], ["mat-header-cell", "", 3, "width", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "concept"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["matColumnDef", "dosage"], ["matColumnDef", "name"], ["matColumnDef", "quantity"], ["matColumnDef", "unit"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matColumnDef", "prepared"], ["matColumnDef", "performer"], ["matColumnDef", "status"], ["matColumnDef", "cancel_dispense"], ["mat-button", "", "mat-dialog-close", ""], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["ngFor", "", 3, "ngForOf"], ["mat-icon-button", "", "matTooltip", "This is the ETPWithdrawal interaction. Does not map well to FHIR "]],
         template: function PrescriptionOrderDetailComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-dialog-content");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "table", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h2");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](2, 1);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, PrescriptionOrderDetailComponent_th_3_Template, 2, 0, "th", 2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, PrescriptionOrderDetailComponent_td_4_Template, 2, 1, "td", 3);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](5, 4);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, PrescriptionOrderDetailComponent_th_6_Template, 2, 0, "th", 2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, PrescriptionOrderDetailComponent_td_7_Template, 2, 1, "td", 3);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](8, 5);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, PrescriptionOrderDetailComponent_th_9_Template, 2, 0, "th", 2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, PrescriptionOrderDetailComponent_td_10_Template, 2, 1, "td", 3);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](11, 6);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, PrescriptionOrderDetailComponent_th_12_Template, 2, 0, "th", 2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, PrescriptionOrderDetailComponent_td_13_Template, 2, 1, "td", 3);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](14, 7);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, PrescriptionOrderDetailComponent_th_15_Template, 2, 0, "th", 2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, PrescriptionOrderDetailComponent_td_16_Template, 5, 0, "td", 3);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, PrescriptionOrderDetailComponent_tr_17_Template, 1, 0, "tr", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](18, PrescriptionOrderDetailComponent_tr_18_Template, 1, 0, "tr", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Medication Requests");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "h2");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "table", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Tracking / Dispensing History");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](4, 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, PrescriptionOrderDetailComponent_th_5_Template, 2, 2, "th", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, PrescriptionOrderDetailComponent_td_6_Template, 2, 1, "td", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](7, 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, PrescriptionOrderDetailComponent_th_8_Template, 2, 0, "th", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, PrescriptionOrderDetailComponent_td_9_Template, 2, 1, "td", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](10, 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, PrescriptionOrderDetailComponent_th_11_Template, 2, 2, "th", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, PrescriptionOrderDetailComponent_td_12_Template, 2, 1, "td", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](13, 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, PrescriptionOrderDetailComponent_th_14_Template, 2, 2, "th", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, PrescriptionOrderDetailComponent_td_15_Template, 2, 1, "td", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](16, 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, PrescriptionOrderDetailComponent_th_17_Template, 2, 0, "th", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](18, PrescriptionOrderDetailComponent_td_18_Template, 2, 1, "td", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](19, 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, PrescriptionOrderDetailComponent_th_20_Template, 2, 0, "th", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](21, PrescriptionOrderDetailComponent_td_21_Template, 2, 1, "td", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](22, PrescriptionOrderDetailComponent_tr_22_Template, 1, 0, "tr", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, PrescriptionOrderDetailComponent_tr_23_Template, 1, 0, "tr", 11);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, " Would make sense to list the dispense history here. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "h2");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "table", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Dispensing History");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](23, 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, PrescriptionOrderDetailComponent_th_24_Template, 2, 0, "th", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "table", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, PrescriptionOrderDetailComponent_td_25_Template, 2, 1, "td", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](27, 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](28, PrescriptionOrderDetailComponent_th_28_Template, 2, 2, "th", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](26, 1);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](27, PrescriptionOrderDetailComponent_th_27_Template, 2, 0, "th", 2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](28, PrescriptionOrderDetailComponent_td_28_Template, 2, 1, "td", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](29, PrescriptionOrderDetailComponent_td_29_Template, 2, 1, "td", 3);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](29, 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](30, 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](30, PrescriptionOrderDetailComponent_th_30_Template, 2, 0, "th", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, PrescriptionOrderDetailComponent_th_31_Template, 2, 0, "th", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, PrescriptionOrderDetailComponent_td_31_Template, 2, 1, "td", 3);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](32, 5);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](33, PrescriptionOrderDetailComponent_th_33_Template, 2, 0, "th", 2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](34, PrescriptionOrderDetailComponent_td_34_Template, 2, 1, "td", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](32, PrescriptionOrderDetailComponent_td_32_Template, 2, 1, "td", 3);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](35, 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](33, 13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](36, PrescriptionOrderDetailComponent_th_36_Template, 2, 0, "th", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](34, PrescriptionOrderDetailComponent_th_34_Template, 2, 0, "th", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](37, PrescriptionOrderDetailComponent_td_37_Template, 2, 1, "td", 3);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](38, 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](39, PrescriptionOrderDetailComponent_th_39_Template, 2, 0, "th", 2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](40, PrescriptionOrderDetailComponent_td_40_Template, 5, 0, "td", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](35, PrescriptionOrderDetailComponent_td_35_Template, 3, 1, "td", 3);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](41, PrescriptionOrderDetailComponent_tr_41_Template, 1, 0, "tr", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](36, 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](42, PrescriptionOrderDetailComponent_tr_42_Template, 1, 0, "tr", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](37, PrescriptionOrderDetailComponent_th_37_Template, 2, 0, "th", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](38, PrescriptionOrderDetailComponent_td_38_Template, 2, 1, "td", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](39, 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](40, PrescriptionOrderDetailComponent_th_40_Template, 2, 0, "th", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](41, PrescriptionOrderDetailComponent_td_41_Template, 2, 1, "td", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](42, 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](43, PrescriptionOrderDetailComponent_th_43_Template, 2, 0, "th", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](44, PrescriptionOrderDetailComponent_td_44_Template, 2, 1, "td", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](45, 14);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](46, PrescriptionOrderDetailComponent_th_46_Template, 2, 0, "th", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](47, PrescriptionOrderDetailComponent_td_47_Template, 2, 1, "td", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](48, 15);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](49, PrescriptionOrderDetailComponent_th_49_Template, 2, 0, "th", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](50, PrescriptionOrderDetailComponent_td_50_Template, 5, 0, "td", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](51, PrescriptionOrderDetailComponent_tr_51_Template, 1, 0, "tr", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](52, PrescriptionOrderDetailComponent_tr_52_Template, 1, 0, "tr", 11);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "mat-dialog-actions");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "mat-dialog-actions");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "button", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "button", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "Cancel");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, "Cancel");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -623,11 +792,11 @@
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("dataSource", ctx.dataSource);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](19);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("matHeaderRowDef", ctx.displayedColumns);
 
@@ -635,11 +804,11 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("matRowDefColumns", ctx.displayedColumns);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("dataSource", ctx.dispenseDataSource);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](25);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("matHeaderRowDef", ctx.displayedDispenseColumns);
 
@@ -648,7 +817,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("matRowDefColumns", ctx.displayedDispenseColumns);
           }
         },
-        directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogContent"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTable"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatColumnDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatRowDef"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_4__["MatButton"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogClose"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderCell"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatCell"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_5__["MatTooltip"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIcon"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderRow"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatRow"]],
+        directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogContent"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTable"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatColumnDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatRowDef"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButton"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogClose"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderCell"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatCell"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderRow"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatRow"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_7__["MatTooltip"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__["MatIcon"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwcmVzY3JpcHRpb24tb3JkZXItZGV0YWlsLmNvbXBvbmVudC5zY3NzIn0= */"]
       });
       /*@__PURE__*/
@@ -663,9 +832,17 @@
           }]
         }], function () {
           return [{
-            type: _covalent_core_dialogs__WEBPACK_IMPORTED_MODULE_2__["TdDialogService"]
+            type: _covalent_core_dialogs__WEBPACK_IMPORTED_MODULE_4__["TdDialogService"]
+          }, {
+            type: _service_nhsd_service__WEBPACK_IMPORTED_MODULE_5__["NhsdService"]
           }, {
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]
+          }, {
+            type: undefined,
+            decorators: [{
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+              args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]]
+            }]
           }];
         }, null);
       })();
@@ -707,62 +884,96 @@
       /* harmony import */
 
 
-      var _angular_material_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/material/dialog */
+      "0IaG");
+      /* harmony import */
+
+
+      var _covalent_core_dialogs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @covalent/core/dialogs */
+      "18Cx");
+      /* harmony import */
+
+
+      var _angular_material_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/material/card */
       "Wp6s");
       /* harmony import */
 
 
-      var _eps_orders_prescription_orders_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _eps_orders_prescription_orders_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ../eps-orders/prescription-orders.component */
       "ApTV");
       /* harmony import */
 
 
-      var _gp_diary_gp_diary_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _gp_diary_gp_diary_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! ../gp-diary/gp-diary.component */
       "rmEv");
       /* harmony import */
 
 
-      var _gp_prescriptions_prescription_refill_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _gp_prescriptions_prescription_refill_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! ../gp-prescriptions/prescription-refill.component */
       "ytM1");
       /* harmony import */
 
 
-      var _covalent_core_file__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _covalent_core_file__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! @covalent/core/file */
       "0Y+T");
       /* harmony import */
 
 
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/forms */
       "3Pt+");
       /* harmony import */
 
 
-      var _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _angular_material_icon__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! @angular/material/icon */
       "NFeN");
 
       var OrdersComponent = /*#__PURE__*/function () {
-        function OrdersComponent(hapi) {
+        function OrdersComponent(nhsd, dialog, _dialogService) {
           _classCallCheck(this, OrdersComponent);
 
-          this.hapi = hapi;
+          this.nhsd = nhsd;
+          this.dialog = dialog;
+          this._dialogService = _dialogService;
           this.disabled = false;
         }
 
         _createClass(OrdersComponent, [{
           key: "ngOnInit",
-          value: function ngOnInit() {} // https://stackoverflow.com/questions/40214772/file-upload-in-angular
+          value: function ngOnInit() {
+            var _this2 = this;
+
+            this.nhsd.error.subscribe(function (error) {
+              var _a, _b;
+
+              console.log(error);
+              var operationOutcome = error;
+              console.log((_a = operationOutcome.issue[0].details) === null || _a === void 0 ? void 0 : _a.text); // @ts-ignore
+
+              var msg = (_b = operationOutcome.issue[0].details) === null || _b === void 0 ? void 0 : _b.text; // @ts-ignore
+
+              var matDialogRef = _this2._dialogService.openAlert({
+                title: 'Error',
+                message: msg
+              });
+
+              matDialogRef.afterClosed().subscribe(function (result) {//console.log(matDialogRef.componentInstance.value);
+              });
+            });
+          } // https://stackoverflow.com/questions/40214772/file-upload-in-angular
 
         }, {
           key: "selectEvent",
           value: function selectEvent(files) {
-            var _this = this;
+            var _this3 = this;
 
             if (files instanceof FileList) {
               console.log('is filelist');
@@ -775,7 +986,7 @@
                 if (typeof fileReader.result === 'string') {
                   var bundle = JSON.parse(fileReader.result);
 
-                  _this.hapi.convertToTransaction(bundle);
+                  _this3.nhsd.convertToTransaction(bundle);
                 }
               };
 
@@ -790,7 +1001,7 @@
       }();
 
       OrdersComponent.ɵfac = function OrdersComponent_Factory(t) {
-        return new (t || OrdersComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_service_nhsd_service__WEBPACK_IMPORTED_MODULE_1__["NhsdService"]));
+        return new (t || OrdersComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_service_nhsd_service__WEBPACK_IMPORTED_MODULE_1__["NhsdService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_covalent_core_dialogs__WEBPACK_IMPORTED_MODULE_3__["TdDialogService"]));
       };
 
       OrdersComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -846,7 +1057,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.files);
           }
         },
-        directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCard"], _eps_orders_prescription_orders_component__WEBPACK_IMPORTED_MODULE_3__["PrescriptionOrdersComponent"], _gp_diary_gp_diary_component__WEBPACK_IMPORTED_MODULE_4__["GpDiaryComponent"], _gp_prescriptions_prescription_refill_component__WEBPACK_IMPORTED_MODULE_5__["PrescriptionRefillComponent"], _covalent_core_file__WEBPACK_IMPORTED_MODULE_6__["TdFileInputComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_7__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_7__["NgModel"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__["MatIcon"]],
+        directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCard"], _eps_orders_prescription_orders_component__WEBPACK_IMPORTED_MODULE_5__["PrescriptionOrdersComponent"], _gp_diary_gp_diary_component__WEBPACK_IMPORTED_MODULE_6__["GpDiaryComponent"], _gp_prescriptions_prescription_refill_component__WEBPACK_IMPORTED_MODULE_7__["PrescriptionRefillComponent"], _covalent_core_file__WEBPACK_IMPORTED_MODULE_8__["TdFileInputComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgModel"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_10__["MatIcon"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJvcmRlcnMuY29tcG9uZW50LnNjc3MifQ== */"]
       });
       /*@__PURE__*/
@@ -862,6 +1073,10 @@
         }], function () {
           return [{
             type: _service_nhsd_service__WEBPACK_IMPORTED_MODULE_1__["NhsdService"]
+          }, {
+            type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]
+          }, {
+            type: _covalent_core_dialogs__WEBPACK_IMPORTED_MODULE_3__["TdDialogService"]
           }];
         }, null);
       })();
@@ -937,7 +1152,7 @@
         _createClass(AuthService, [{
           key: "performGetAccessToken",
           value: function performGetAccessToken(authCode) {
-            var _this2 = this;
+            var _this4 = this;
 
             // https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation/user-restricted-restful-apis-nhs-cis2-combined-authentication-and-authorisation
             var bearerToken = 'Basic ' + btoa(_environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].oauth2.client_id + ':' + _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].oauth2.client_secret);
@@ -957,10 +1172,10 @@
 
             this.postAny(url, urlParams.toString(), headers).subscribe(function (token) {
               // console.log(response);
-              _this2.smartToken = token;
+              _this4.smartToken = token;
               console.log('OAuth2Token : ' + token);
 
-              _this2.setAccessToken(token);
+              _this4.setAccessToken(token);
             }, function (error) {
               console.log(error);
             }, function () {// Emit event
@@ -1514,12 +1729,12 @@
         _createClass(PrescriptionOrdersComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this3 = this;
+            var _this5 = this;
 
             this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](this.data);
             this.hapi.queryTasks();
             this.hapi.taskChange.subscribe(function () {
-              _this3.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](_this3.hapi.getTasks());
+              _this5.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](_this5.hapi.getTasks());
             });
           }
         }, {
@@ -1787,16 +2002,16 @@
         _createClass(CallbackComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this4 = this;
+            var _this6 = this;
 
             this.auth.tokenChange.subscribe(function () {
-              _this4.router.navigateByUrl('/');
+              _this6.router.navigateByUrl('/');
             });
             this.route.queryParamMap.subscribe(function (params) {
               console.log(params);
               var code = params.get('code'); // var state = params.get('state');
 
-              _this4.auth.performGetAccessToken(code);
+              _this6.auth.performGetAccessToken(code);
             });
           }
         }]);
@@ -2360,7 +2575,7 @@
         }, {
           key: "queryTasks",
           value: function queryTasks() {
-            var _this5 = this;
+            var _this7 = this;
 
             var headers = this.getHeaders(); // tslint:disable-next-line:typedef
 
@@ -2371,24 +2586,24 @@
 
               if (bundle.entry !== undefined && bundle.entry.length > 0) {
                 console.log('Task found.');
-                _this5.tasks = [];
+                _this7.tasks = [];
 
-                var _iterator = _createForOfIteratorHelper(bundle.entry),
-                    _step;
+                var _iterator2 = _createForOfIteratorHelper(bundle.entry),
+                    _step2;
 
                 try {
-                  for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                    var entry = _step.value;
+                  for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                    var entry = _step2.value;
 
-                    _this5.tasks.push(entry.resource);
+                    _this7.tasks.push(entry.resource);
                   }
                 } catch (err) {
-                  _iterator.e(err);
+                  _iterator2.e(err);
                 } finally {
-                  _iterator.f();
+                  _iterator2.f();
                 }
 
-                _this5.taskChange.emit({});
+                _this7.taskChange.emit({});
               } else {
                 console.log('Task not found.');
               }
@@ -2402,7 +2617,7 @@
         }, {
           key: "queryMedicationRequests",
           value: function queryMedicationRequests() {
-            var _this6 = this;
+            var _this8 = this;
 
             var headers = this.getHeaders(); // tslint:disable-next-line:typedef
 
@@ -2413,24 +2628,24 @@
 
               if (bundle.entry !== undefined && bundle.entry.length > 0) {
                 console.log('Medication found.');
-                _this6.medicationRequests = [];
+                _this8.medicationRequests = [];
 
-                var _iterator2 = _createForOfIteratorHelper(bundle.entry),
-                    _step2;
+                var _iterator3 = _createForOfIteratorHelper(bundle.entry),
+                    _step3;
 
                 try {
-                  for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-                    var entry = _step2.value;
+                  for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+                    var entry = _step3.value;
 
-                    _this6.medicationRequests.push(entry.resource);
+                    _this8.medicationRequests.push(entry.resource);
                   }
                 } catch (err) {
-                  _iterator2.e(err);
+                  _iterator3.e(err);
                 } finally {
-                  _iterator2.f();
+                  _iterator3.f();
                 }
 
-                _this6.medicationChange.emit({});
+                _this8.medicationChange.emit({});
               } else {
                 console.log('Medication not found.');
               }
@@ -2687,6 +2902,9 @@
 
           this.http = http;
           this.medicationChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+          this.medicationRequest = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+          this.medicationDispense = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+          this.error = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
           this.taskChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
           this.tasks = [];
         }
@@ -2699,11 +2917,11 @@
         }, {
           key: "queryTasks",
           value: function queryTasks() {
-            var _this7 = this;
+            var _this9 = this;
 
             var headers = this.getHeaders(); // tslint:disable-next-line:typedef
 
-            this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].nhsd + '/Task?patient.identifier=9453740519', {
+            this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].nhsd + '/Task?patient.identifier=9876543210', {
               headers: headers
             }).subscribe(function (result) {
               var _a;
@@ -2712,26 +2930,26 @@
 
               if (bundle.entry !== undefined && bundle.entry.length > 0) {
                 console.log('Task found.');
-                _this7.tasks = [];
+                _this9.tasks = [];
 
-                var _iterator3 = _createForOfIteratorHelper(bundle.entry),
-                    _step3;
+                var _iterator4 = _createForOfIteratorHelper(bundle.entry),
+                    _step4;
 
                 try {
-                  for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-                    var entry = _step3.value;
+                  for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+                    var entry = _step4.value;
 
                     if (((_a = entry.resource) === null || _a === void 0 ? void 0 : _a.resourceType) === 'Task') {
-                      _this7.tasks.push(entry.resource);
+                      _this9.tasks.push(entry.resource);
                     }
                   }
                 } catch (err) {
-                  _iterator3.e(err);
+                  _iterator4.e(err);
                 } finally {
-                  _iterator3.f();
+                  _iterator4.f();
                 }
 
-                _this7.taskChange.emit({});
+                _this9.taskChange.emit({});
               } else {
                 console.log('Task not found.');
               }
@@ -2740,9 +2958,9 @@
         }, {
           key: "convertToTransaction",
           value: function convertToTransaction(bundle) {
-            var _this8 = this;
+            var _this10 = this;
 
-            var _a, _b, _c, _d, _e, _f;
+            var _a, _b, _c, _d, _e, _f, _g;
 
             var newBundle = {
               resourceType: 'Bundle',
@@ -2767,12 +2985,12 @@
             if (bundle.entry !== undefined && bundle.entry.length > 0) {
               var practitionerRole = '';
 
-              var _iterator4 = _createForOfIteratorHelper(bundle.entry),
-                  _step4;
+              var _iterator5 = _createForOfIteratorHelper(bundle.entry),
+                  _step5;
 
               try {
-                for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-                  var _entry2 = _step4.value;
+                for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+                  var _entry2 = _step5.value;
                   var _resource = _entry2.resource;
 
                   if ((_resource === null || _resource === void 0 ? void 0 : _resource.resourceType) === 'Patient') {
@@ -2788,6 +3006,34 @@
                     if (((_a = medicationHeader.eventCoding) === null || _a === void 0 ? void 0 : _a.code) === 'prescription-order') {
                       prescriptionorder = true;
                     }
+                  }
+
+                  if ((_resource === null || _resource === void 0 ? void 0 : _resource.resourceType) === 'MedicationDispense') {
+                    console.log('MedicationDispene');
+                    var medicationDispense = _resource;
+
+                    if (((_b = medicationDispense.subject) === null || _b === void 0 ? void 0 : _b.identifier) !== undefined) {
+                      medicationDispense.subject.reference = 'Patient?identifier=' + medicationDispense.subject.identifier.system + '|' + medicationDispense.subject.identifier.value;
+                    }
+
+                    if (medicationDispense.authorizingPrescription !== undefined && medicationDispense.authorizingPrescription.length > 0) {
+                      var _iterator7 = _createForOfIteratorHelper(medicationDispense.authorizingPrescription),
+                          _step7;
+
+                      try {
+                        for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
+                          var ident = _step7.value;
+
+                          if (ident.identifier !== undefined) {
+                            ident.reference = 'MedicationRequest?identifier=' + ident.identifier.system + '|' + ident.identifier.value;
+                          }
+                        }
+                      } catch (err) {
+                        _iterator7.e(err);
+                      } finally {
+                        _iterator7.f();
+                      }
+                    }
                   } // tslint:disable-next-line:no-conditional-assignment
 
 
@@ -2800,7 +3046,7 @@
                     }
 
                     task.requester = medicationRequest.requester;
-                    practitionerRole = (_b = medicationRequest.requester) === null || _b === void 0 ? void 0 : _b.reference;
+                    practitionerRole = (_c = medicationRequest.requester) === null || _c === void 0 ? void 0 : _c.reference;
                     task.authoredOn = medicationRequest.authoredOn;
 
                     if (medicationRequest.dispenseRequest !== undefined && medicationRequest.dispenseRequest.performer !== undefined) {
@@ -2819,10 +3065,10 @@
                       valueReference: {
                         type: 'MedicationRequest',
                         reference: _entry2.fullUrl,
-                        display: (_c = medicationRequest === null || medicationRequest === void 0 ? void 0 : medicationRequest.medicationCodeableConcept) === null || _c === void 0 ? void 0 : _c.coding[0].display
+                        display: (_d = medicationRequest === null || medicationRequest === void 0 ? void 0 : medicationRequest.medicationCodeableConcept) === null || _d === void 0 ? void 0 : _d.coding[0].display
                       }
                     };
-                    (_d = task.input) === null || _d === void 0 ? void 0 : _d.push(input);
+                    (_e = task.input) === null || _e === void 0 ? void 0 : _e.push(input);
                   }
 
                   if ((_resource === null || _resource === void 0 ? void 0 : _resource.identifier) !== undefined) {
@@ -2839,28 +3085,28 @@
                       method: 'PUT',
                       url: (_resource === null || _resource === void 0 ? void 0 : _resource.resourceType) + '?identifier=' + identifier
                     };
-                    (_e = newBundle.entry) === null || _e === void 0 ? void 0 : _e.push(_entry2);
+                    (_f = newBundle.entry) === null || _f === void 0 ? void 0 : _f.push(_entry2);
                   } else {// remove resource
                   }
                 }
               } catch (err) {
-                _iterator4.e(err);
+                _iterator5.e(err);
               } finally {
-                _iterator4.f();
+                _iterator5.f();
               }
 
               if (practitionerRole !== '') {
                 console.log(practitionerRole);
 
-                var _iterator5 = _createForOfIteratorHelper(bundle.entry),
-                    _step5;
+                var _iterator6 = _createForOfIteratorHelper(bundle.entry),
+                    _step6;
 
                 try {
-                  for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-                    var _entry = _step5.value;
+                  for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+                    var entry = _step6.value;
 
-                    if (_entry.fullUrl === practitionerRole) {
-                      var resource = _entry.resource;
+                    if (entry.fullUrl === practitionerRole) {
+                      var resource = entry.resource;
 
                       if (resource.resourceType === 'PractitionerRole') {
                         // @ts-ignore
@@ -2874,24 +3120,22 @@
                     }
                   }
                 } catch (err) {
-                  _iterator5.e(err);
+                  _iterator6.e(err);
                 } finally {
-                  _iterator5.f();
+                  _iterator6.f();
                 }
               }
 
-              console.log(task); // @ts-ignore
-
-              var entry = {
-                resource: task,
-                request: {
-                  method: 'PUT',
-                  url: 'Task?identifier=' + this.getIdentifier(task.identifier[0])
-                }
-              };
-
               if (prescriptionorder) {
-                (_f = newBundle.entry) === null || _f === void 0 ? void 0 : _f.push(entry);
+                console.log(task);
+                var _entry = {
+                  resource: task,
+                  request: {
+                    method: 'PUT',
+                    url: 'Task?identifier=' + this.getIdentifier(task.identifier[0])
+                  }
+                };
+                (_g = newBundle.entry) === null || _g === void 0 ? void 0 : _g.push(_entry);
               }
 
               console.log(newBundle);
@@ -2901,9 +3145,56 @@
                 console.log('done post to hapi');
                 console.log(result);
 
-                _this8.medicationChange.emit({});
+                _this10.medicationChange.emit({});
+              }, function (error) {
+                _this10.error.emit(error.error);
               });
             } else {}
+          }
+        }, {
+          key: "getMedicationRequest",
+          value: function getMedicationRequest(url) {
+            var _this11 = this;
+
+            var headers = this.getHeaders();
+            this.http.get(url, {
+              'headers': headers
+            }).subscribe(function (medicationRequest) {
+              _this11.medicationRequest.emit(medicationRequest);
+            });
+          }
+        }, {
+          key: "getMedicationDispense",
+          value: function getMedicationDispense(url) {
+            var _this12 = this;
+
+            var headers = this.getHeaders();
+            this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].nhsd + '/MedicationDispense?prescription=' + url, {
+              'headers': headers
+            }).subscribe(function (resource) {
+              var _a;
+
+              var bundle = resource;
+
+              if (bundle.entry !== undefined) {
+                var _iterator8 = _createForOfIteratorHelper(bundle.entry),
+                    _step8;
+
+                try {
+                  for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
+                    var entry = _step8.value;
+
+                    if (((_a = entry.resource) === null || _a === void 0 ? void 0 : _a.resourceType) === 'MedicationDispense') {
+                      _this12.medicationDispense.emit(entry.resource);
+                    }
+                  }
+                } catch (err) {
+                  _iterator8.e(err);
+                } finally {
+                  _iterator8.f();
+                }
+              }
+            });
           }
         }, {
           key: "getHeaders",
@@ -3455,12 +3746,12 @@
         _createClass(GpDiaryComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this9 = this;
+            var _this13 = this;
 
             this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](this.data);
             this.fhir.queryTasks();
             this.fhir.taskChange.subscribe(function () {
-              _this9.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](_this9.fhir.getTasks());
+              _this13.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](_this13.fhir.getTasks());
             });
           }
         }, {
@@ -4450,12 +4741,12 @@
         _createClass(PrescriptionRefillComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this10 = this;
+            var _this14 = this;
 
             this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](this.data);
             this.fhir.queryMedicationRequests();
             this.fhir.medicationChange.subscribe(function () {
-              _this10.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](_this10.fhir.getMedicationRequests());
+              _this14.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](_this14.fhir.getMedicationRequests());
             });
           }
         }, {

@@ -12,6 +12,7 @@ import {
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from "../../environments/environment";
 import {AuthService} from "./auth.service";
+import {MedicationDispense} from 'fhir/r4';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,9 @@ import {AuthService} from "./auth.service";
 export class NhsdService {
 
   medicationChange: EventEmitter<any> = new EventEmitter();
+  public medicationRequest: EventEmitter<MedicationRequest> = new EventEmitter();
+  public medicationDispense: EventEmitter<MedicationDispense> = new EventEmitter();
+  error: EventEmitter<any> = new EventEmitter();
   constructor(private http: HttpClient) { }
 
 
@@ -33,7 +37,7 @@ export class NhsdService {
 
     const headers = this.getHeaders();
     // tslint:disable-next-line:typedef
-    this.http.get(environment.nhsd + '/Task?patient.identifier=9453740519', { headers}).subscribe(
+    this.http.get(environment.nhsd + '/Task?patient.identifier=9876543210', { headers}).subscribe(
         result => {
           const bundle = result as Bundle;
           if (bundle.entry !== undefined && bundle.entry.length > 0) {
@@ -89,6 +93,22 @@ export class NhsdService {
           const medicationHeader = resource as MessageHeader;
           if (medicationHeader.eventCoding?.code === 'prescription-order') {
             prescriptionorder = true;
+          }
+        }
+        if (resource?.resourceType === 'MedicationDispense' ) {
+          console.log('MedicationDispene');
+          let medicationDispense = resource as MedicationDispense;
+          if (medicationDispense.subject?.identifier !== undefined) {
+            medicationDispense.subject.reference = 'Patient?identifier=' + medicationDispense.subject.identifier.system
+                + '|' + medicationDispense.subject.identifier.value;
+          }
+          if (medicationDispense.authorizingPrescription !== undefined && medicationDispense.authorizingPrescription.length > 0) {
+            for (let ident of medicationDispense.authorizingPrescription) {
+              if (ident.identifier !== undefined) {
+                ident.reference = 'MedicationRequest?identifier=' + ident.identifier.system
+                    + '|' + ident.identifier.value;
+              }
+            }
           }
         }
         // tslint:disable-next-line:no-conditional-assignment
@@ -159,16 +179,17 @@ export class NhsdService {
           }
         }
       }
-      console.log(task);
-      // @ts-ignore
-      const entry: BundleEntry = {
-        resource : task,
-        request : {
-          method : 'PUT',
-          url: 'Task?identifier=' + this.getIdentifier(task.identifier[0])
-        }
-      };
+
+
       if (prescriptionorder) {
+        console.log(task);
+        const entry: BundleEntry = {
+          resource : task,
+          request : {
+            method : 'PUT',
+            url: 'Task?identifier=' + this.getIdentifier(task.identifier[0])
+          }
+        };
         newBundle.entry?.push(entry);
       }
       console.log(newBundle);
@@ -177,12 +198,39 @@ export class NhsdService {
             console.log('done post to hapi');
             console.log(result);
             this.medicationChange.emit({});
+          },
+          error => {
+            this.error.emit(error.error);
           }
       );
     } else {
     }
   }
 
+  getMedicationRequest(url: string) {
+    const headers = this.getHeaders();
+    this.http.get<any>(url, {'headers': headers}).subscribe(
+        medicationRequest => {
+          this.medicationRequest.emit(medicationRequest);
+        }
+    )
+  }
+  getMedicationDispense(url: string) {
+    const headers = this.getHeaders();
+    this.http.get<any>(environment.nhsd + '/MedicationDispense?prescription=' + url, {'headers': headers}).subscribe(
+        resource => {
+          const bundle: Bundle = resource as Bundle;
+          if (bundle.entry !== undefined) {
+            for (let entry of bundle.entry) {
+
+              if (entry.resource?.resourceType === 'MedicationDispense') {
+                this.medicationDispense.emit(entry.resource as MedicationDispense);
+              }
+            }
+          }
+        }
+    )
+  }
 
   getHeaders(): HttpHeaders {
 

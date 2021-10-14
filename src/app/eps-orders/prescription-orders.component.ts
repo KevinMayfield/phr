@@ -21,6 +21,7 @@ export class PrescriptionOrdersComponent implements OnInit {
     data: Task[] = [];
 
 
+
   constructor(private hapi: NhsdService,
               private dialog: MatDialog) { }
 
@@ -42,6 +43,7 @@ export class PrescriptionOrdersComponent implements OnInit {
           resource: resource
       };
       this.dialog.open( PrescriptionOrderDetailComponent, dialogConfig);
+
   }
 
 }
