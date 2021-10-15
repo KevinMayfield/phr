@@ -7,8 +7,6 @@ export const environment = {
   oauth2 : {
     token : 'https://int.api.service.nhs.uk/oauth2-no-smartcard/token',
     auth : 'https://int.api.service.nhs.uk/oauth2-no-smartcard/authorize',
-    client_id : 'FXmDMToQI68FhfNmqA3QgaiPJ3AdrRQt',
-    client_secret : '1GVeaPTFi59WEX7V',
     cookie_domain : 'localhost',
     logonUrl: 'http://localhost:4200/ccri-logon'
   },

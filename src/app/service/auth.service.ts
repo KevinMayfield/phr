@@ -36,7 +36,8 @@ export class AuthService {
 
     // https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation/user-restricted-restful-apis-nhs-cis2-combined-authentication-and-authorisation
 
-    const bearerToken = 'Basic ' + btoa(environment.oauth2.client_id + ':' + environment.oauth2.client_secret);
+    const bearerToken = '';
+    // 'Basic ' + btoa(environment.oauth2.client_id + ':' + environment.oauth2.client_secret);
     const headers = new HttpHeaders( { 'Content-Type': 'application/x-www-form-urlencoded'});
 
     const url = environment.oauth2.token;
@@ -45,8 +46,8 @@ export class AuthService {
     const urlParams = new URLSearchParams(
             { grant_type: 'authorization_code'});
 
-    urlParams.append('client_id', environment.oauth2.client_id),
-    urlParams.append(  'client_secret', environment.oauth2.client_secret);
+    // urlParams.append('client_id', environment.oauth2.client_id),
+    // urlParams.append(  'client_secret', environment.oauth2.client_secret);
     urlParams.append(  'redirect_uri', document.baseURI + 'callback');
     if (typeof authCode === 'string') {
         urlParams.append('code', authCode);

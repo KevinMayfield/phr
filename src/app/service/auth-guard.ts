@@ -11,8 +11,9 @@ export class AuthGuard  implements CanActivate {
 
   }
   canActivate(): any {
+    return true;
 
-
+    /*
     if (this.auth.hasAccessToken()) {
       return true;
     } else {
@@ -20,6 +21,7 @@ export class AuthGuard  implements CanActivate {
         this.router.navigate(['login']);
         return false;
     }
+     */
   }
 
 }
