@@ -37,6 +37,8 @@ import {CovalentDialogsModule} from "@covalent/core/dialogs";
 import {MatDialogModule} from '@angular/material/dialog';
 import { RefillComponent } from './refill/refill.component';
 import { GpTaskComponent } from './gp-task/gp-task.component';
+import { DiaryEntryComponent } from './diary-entry/diary-entry.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 
 @NgModule({
@@ -51,7 +53,8 @@ import { GpTaskComponent } from './gp-task/gp-task.component';
       LoginComponent,
       PrescriptionOrderDetailComponent,
       RefillComponent,
-      GpTaskComponent
+      GpTaskComponent,
+      DiaryEntryComponent
   ],
     imports: [
         BrowserModule,
@@ -82,7 +85,8 @@ import { GpTaskComponent } from './gp-task/gp-task.component';
         CovalentFileModule,
         ReactiveFormsModule,
         FormsModule,
-        MatDialogModule
+        MatDialogModule,
+        MatFormFieldModule
     ],
     entryComponents: [
         PrescriptionOrderDetailComponent,

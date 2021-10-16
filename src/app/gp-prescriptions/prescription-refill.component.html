@@ -48,7 +48,9 @@
         <ng-container matColumnDef="reorder_medication">
             <th mat-header-cell *matHeaderCellDef> Reorder </th>
             <td mat-cell *matCellDef="let element">
-                <button color="accent" mat-icon-button (click)="refill(element)"><mat-icon>add_shopping_cart</mat-icon>Reorder</button>
+                <span *ngIf="element.courseOfTherapyType.coding[0].code === 'continuous'">
+                    <button color="accent" mat-icon-button (click)="refill(element)"><mat-icon>add_shopping_cart</mat-icon>Reorder</button>
+                </span>
             </td>
         </ng-container>
 

@@ -4,7 +4,13 @@ import {FhirService} from '../service/FhirService';
 import {MedicationRequest} from 'fhir/r4';
 import {DatePipe} from '@angular/common';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
-import {TdDialogService, TdPromptDialogComponent} from "@covalent/core/dialogs";
+import {
+    IDraggableRefs,
+    ResizableDraggableDialog,
+    TdDialogService,
+    TdPromptDialogComponent
+} from "@covalent/core/dialogs";
+import {DiaryEntryComponent} from "../diary-entry/diary-entry.component";
 
 @Component({
   selector: 'app-prescription-refill',
@@ -37,16 +43,21 @@ export class PrescriptionRefillComponent implements OnInit {
   }
   refill(resource: any): void {
 
-      const matDialogRef = this._dialogService.openPrompt({
-          title: 'Re-Order (FHIR Task)',
-          message: 'Why do you wish to re-order ' + resource?.medicationCodeableConcept?.coding[0].display,
-          value: '',
-          cancelButton: 'Cancel',
-          acceptButton: 'Ok',
+      const {
+          matDialogRef,
+          dragRefSubject,
+      }: IDraggableRefs<DiaryEntryComponent> = this._dialogService.openDraggable({
+          component: DiaryEntryComponent,
+          dragHandleSelectors: ['mat-toolbar'],
+          config: {
+              panelClass: ['td-window-dialog'], // pass this class in to ensure certain css is properly added,
+              data : {
+                  text : 'some text'
+              }
+          },
       });
-      matDialogRef.afterClosed().subscribe(result => {
-          console.log(matDialogRef.componentInstance.value);
-      });
+
+      matDialogRef.componentInstance.closed.subscribe(() => matDialogRef.close());
   }
 
 }
