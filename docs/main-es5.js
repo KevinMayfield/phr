@@ -3998,13 +3998,19 @@
       /* harmony import */
 
 
-      var _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! @angular/material/tooltip */
+      "Qu3c");
+      /* harmony import */
+
+
+      var _angular_material_icon__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! @angular/material/icon */
       "NFeN");
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/router */
       "tyNb");
 
@@ -4480,7 +4486,7 @@
         selectors: [["app-gp-diary"]],
         decls: 47,
         vars: 3,
-        consts: [["layout", "row", "layout-align", "start center", "flex", ""], ["flex", ""], ["mat-mini-fab", "", "aria-label", "Example icon button with a heart icon", 3, "click"], ["mat-table", "", "width", "100%", 3, "dataSource"], ["matColumnDef", "status"], ["mat-header-cell", "", 3, "width", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "medications"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["matColumnDef", "pharmacy"], ["matColumnDef", "requester"], ["matColumnDef", "authored"], ["matColumnDef", "when"], ["matColumnDef", "reason"], ["matColumnDef", "notes"], ["matColumnDef", "order_number"], ["matColumnDef", "return_order"], ["matColumnDef", "view_order"], ["matColumnDef", "track_order"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["ngFor", "", 3, "ngForOf"], ["color", "warn", "mat-icon-button", "", 4, "ngIf"], ["color", "warn", "mat-icon-button", ""], ["color", "accent", "mat-icon-button", "", "routerLink", "/details/123453-ABCDFE-12345"], ["mat-header-row", ""], ["mat-row", ""]],
+        consts: [["layout", "row", "layout-align", "start center", "flex", ""], ["flex", ""], ["mat-mini-fab", "", "matTooltip", "Add diary etry/task", "aria-label", "Example icon button with a heart icon", 3, "click"], ["mat-table", "", "width", "100%", 3, "dataSource"], ["matColumnDef", "status"], ["mat-header-cell", "", 3, "width", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "medications"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["matColumnDef", "pharmacy"], ["matColumnDef", "requester"], ["matColumnDef", "authored"], ["matColumnDef", "when"], ["matColumnDef", "reason"], ["matColumnDef", "notes"], ["matColumnDef", "order_number"], ["matColumnDef", "return_order"], ["matColumnDef", "view_order"], ["matColumnDef", "track_order"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["ngFor", "", 3, "ngForOf"], ["color", "warn", "mat-icon-button", "", 4, "ngIf"], ["color", "warn", "mat-icon-button", ""], ["color", "accent", "mat-icon-button", "", "routerLink", "/details/123453-ABCDFE-12345"], ["mat-header-row", ""], ["mat-row", ""]],
         template: function GpDiaryComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-card");
@@ -4632,7 +4638,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("matRowDefColumns", ctx.displayedColumns);
           }
         },
-        directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardHeader"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__["MatIcon"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTable"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatColumnDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderCell"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatCell"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_router__WEBPACK_IMPORTED_MODULE_10__["RouterLink"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderRow"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatRow"]],
+        directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardHeader"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_9__["MatTooltip"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_10__["MatIcon"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTable"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatColumnDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderCell"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatCell"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_router__WEBPACK_IMPORTED_MODULE_11__["RouterLink"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatHeaderRow"], _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatRow"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJncC1kaWFyeS5jb21wb25lbnQuc2NzcyJ9 */"]
       });
       /*@__PURE__*/
