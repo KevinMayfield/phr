@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {FhirService} from '../service/FhirService';
 import {MedicationRequest, Task} from 'fhir/r4';
@@ -11,6 +11,11 @@ import {
     TdPromptDialogComponent
 } from "@covalent/core/dialogs";
 import {DiaryEntryComponent} from "../diary-entry/diary-entry.component";
+import {TrackingComponent} from "../tracking/tracking.component";
+import {NhsdService} from "../service/nhsd.service";
+import {environment} from "../../environments/environment";
+
+
 
 @Component({
   selector: 'app-prescription-refill',
@@ -19,9 +24,10 @@ import {DiaryEntryComponent} from "../diary-entry/diary-entry.component";
 })
 export class PrescriptionRefillComponent implements OnInit {
 
+    @Input()
+    source: string = 'GP';
 
-
-    displayedColumns: string[] = ['authored', 'status', 'name',  'courseOfTherapy',  'quantity', 'unit', 'reorder_medication'];
+    displayedColumns: string[] = ['authored', 'status', 'name',  'courseOfTherapy',  'quantity', 'unit', 'reorder_medication', 'track_order'];
 
     dataSource: any;
 
@@ -31,16 +37,43 @@ export class PrescriptionRefillComponent implements OnInit {
 
 
   constructor(private fhir: FhirService,
+              private nhsd: NhsdService,
               private dialog: MatDialog,
               private _dialogService: TdDialogService) { }
 
   ngOnInit(): void {
       this.dataSource = new MatTableDataSource <any>(this.data);
-      this.fhir.queryMedicationRequests();
-      this.fhir.medicationChange.subscribe(() => {
-         this.dataSource = new MatTableDataSource(this.fhir.getMedicationRequests());
-      });
+      if (this.source == 'GP') {
+          this.fhir.queryMedicationRequests();
+          this.fhir.medicationChange.subscribe(() => {
+
+              this.dataSource = new MatTableDataSource(this.fhir.getMedicationRequests());
+          });
+      }
+      if (this.source == 'EPS') {
+          this.nhsd.getMedicationRequest(environment.nhsd + '/MedicationRequest?patient.identifier=9876543210');
+          this.nhsd.medicationRequest.subscribe(() => {
+
+              this.dataSource = new MatTableDataSource(this.nhsd.getMedicationRequests());
+          });
+      }
   }
+
+  tracking(event: any): void {
+      const {
+          matDialogRef,
+          dragRefSubject,
+      }: IDraggableRefs<TrackingComponent> = this._dialogService.openDraggable({
+          component: TrackingComponent,
+          dragHandleSelectors: ['mat-toolbar'],
+          config: {
+              panelClass: ['td-window-dialog'], // pass this class in to ensure certain css is properly added,
+          },
+      });
+
+      matDialogRef.componentInstance.closed.subscribe(() => matDialogRef.close());
+  }
+
   refill(resource: MedicationRequest): void {
 
       const task: Task = {

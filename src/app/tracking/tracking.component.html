@@ -1,0 +1,17 @@
+<td-window-dialog
+        [title]="'Tracking (FHIR Task)'"
+        [toolbarColor]="'accent'"
+        (close)="closed.emit()"
+>
+    <mat-card>
+        <td-flavored-markdown>{{ basicFlavoredMarkdown }}</td-flavored-markdown>
+        <mat-card-actions>
+            <button mat-raised-button class="text-upper" (click)="closed.emit()">
+                Cancel
+            </button>
+            <button mat-raised-button class="text-upper" (click)="ok($event)">
+                Ok
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</td-window-dialog>

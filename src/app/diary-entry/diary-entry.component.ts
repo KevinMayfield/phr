@@ -21,7 +21,7 @@ class DragRef {
 export class DiaryEntryComponent implements OnInit {
   @Output() closed: EventEmitter<void> = new EventEmitter();
 
-  @ViewChild('diaryForm', { static: true }) diaryForm: TdDynamicFormsComponent;
+  @ViewChild('diaryForm', { static: true }) diaryForm: TdDynamicFormsComponent | undefined;
 
   formElements: ITdDynamicElementConfig[] = [
 

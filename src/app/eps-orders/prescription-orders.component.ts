@@ -5,6 +5,8 @@ import {NhsdService} from '../service/nhsd.service';
 import {Task} from 'fhir/r4';
 import {DatePipe} from "@angular/common";
 import {PrescriptionOrderDetailComponent} from "../prescription-order-detail/prescription-order-detail.component";
+import {IDraggableRefs, TdDialogService} from "@covalent/core/dialogs";
+import {TrackingComponent} from "../tracking/tracking.component";
 
 @Component({
   selector: 'app-prescription-orders',
@@ -23,7 +25,8 @@ export class PrescriptionOrdersComponent implements OnInit {
 
 
   constructor(private hapi: NhsdService,
-              private dialog: MatDialog) { }
+              private dialog: MatDialog,
+              private _dialogService: TdDialogService) { }
 
   ngOnInit(): void {
      this.dataSource = new MatTableDataSource <any>(this.data);
@@ -45,5 +48,20 @@ export class PrescriptionOrdersComponent implements OnInit {
       this.dialog.open( PrescriptionOrderDetailComponent, dialogConfig);
 
   }
+
+    tracking(event: any): void {
+        const {
+            matDialogRef,
+            dragRefSubject,
+        }: IDraggableRefs<TrackingComponent> = this._dialogService.openDraggable({
+            component: TrackingComponent,
+            dragHandleSelectors: ['mat-toolbar'],
+            config: {
+                panelClass: ['td-window-dialog'], // pass this class in to ensure certain css is properly added,
+            },
+        });
+
+        matDialogRef.componentInstance.closed.subscribe(() => matDialogRef.close());
+    }
 
 }

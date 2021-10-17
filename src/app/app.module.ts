@@ -35,12 +35,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {GpDiaryComponent} from "./gp-diary/gp-diary.component";
 import {CovalentDialogsModule} from "@covalent/core/dialogs";
 import {MatDialogModule} from '@angular/material/dialog';
-import { RefillComponent } from './refill/refill.component';
 import { DiaryEntryComponent } from './diary-entry/diary-entry.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatMomentDateModule} from "@angular/material-moment-adapter";
 import {MAT_DATE_LOCALE} from "@angular/material/core";
+import { TrackingComponent } from './tracking/tracking.component';
+import {CovalentFlavoredMarkdownModule} from "@covalent/flavored-markdown";
 
 @NgModule({
   declarations: [
@@ -53,8 +54,8 @@ import {MAT_DATE_LOCALE} from "@angular/material/core";
       CallbackComponent,
       LoginComponent,
       PrescriptionOrderDetailComponent,
-      RefillComponent,
-      DiaryEntryComponent
+      DiaryEntryComponent,
+      TrackingComponent
   ],
     imports: [
         BrowserModule,
@@ -72,6 +73,7 @@ import {MAT_DATE_LOCALE} from "@angular/material/core";
         CovalentBaseEchartsModule,
         CovalentMessageModule,
         CovalentDialogsModule,
+        CovalentFlavoredMarkdownModule,
 
         MatIconModule,
         MatButtonModule,
@@ -92,8 +94,7 @@ import {MAT_DATE_LOCALE} from "@angular/material/core";
 
     ],
     entryComponents: [
-        PrescriptionOrderDetailComponent,
-        RefillComponent
+        PrescriptionOrderDetailComponent
     ],
   providers: [
       AuthGuard,

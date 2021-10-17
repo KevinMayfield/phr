@@ -24,12 +24,16 @@ export class NhsdService {
   public medicationDispense: EventEmitter<MedicationDispense> = new EventEmitter();
   error: EventEmitter<any> = new EventEmitter();
   constructor(private http: HttpClient) { }
-
+  private medicationRequests: MedicationRequest[] = [];
 
   taskChange: EventEmitter<any> = new EventEmitter();
   private tasks: Task[] = [];
   public getTasks(): Task[] {
     return this.tasks;
+  }
+
+  public getMedicationRequests(): MedicationRequest[] {
+    return this.medicationRequests;
   }
 
   public queryTasks(): any {
@@ -211,7 +215,26 @@ export class NhsdService {
     const headers = this.getHeaders();
     this.http.get<any>(url, {'headers': headers}).subscribe(
         medicationRequest => {
-          this.medicationRequest.emit(medicationRequest);
+          if (medicationRequest.resourceType === 'Bundle') {
+            console.log('Found a Bundle');
+            const bundle = medicationRequest as Bundle;
+            if (bundle.entry !== undefined && bundle.entry.length > 0) {
+
+              this.medicationRequests = [];
+              for (const entry of bundle.entry) {
+
+                if (entry.resource?.resourceType === 'MedicationRequest') {
+
+                  this.medicationRequests.push(entry.resource as MedicationRequest);
+                }
+              }
+            } else {
+              console.log('Medication not found.');
+            }
+            this.medicationRequest.emit(medicationRequest);
+          } else {
+            this.medicationRequest.emit(medicationRequest);
+          }
         }
     )
   }

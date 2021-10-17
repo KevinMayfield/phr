@@ -58,7 +58,6 @@ export class FhirService {
             result => {
                 const bundle = result as Bundle;
                 if (bundle.entry !== undefined && bundle.entry.length > 0) {
-                    console.log('Medication found.');
                     this.medicationRequests = [];
                     for (const entry of bundle.entry) {
                         this.medicationRequests.push(entry.resource as MedicationRequest);
