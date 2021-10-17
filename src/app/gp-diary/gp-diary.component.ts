@@ -4,7 +4,8 @@ import {Task} from 'fhir/r4';
 import {DatePipe} from "@angular/common";
 import {FhirService} from "../service/FhirService";
 import {MatDialog} from "@angular/material/dialog";
-import {TdDialogService} from "@covalent/core/dialogs";
+import {IDraggableRefs, TdDialogService} from "@covalent/core/dialogs";
+import {DiaryEntryComponent} from "../diary-entry/diary-entry.component";
 
 @Component({
   selector: 'app-gp-diary',
@@ -34,16 +35,30 @@ export class GpDiaryComponent implements OnInit {
       });
   }
   diary(): void {
-      const matDialogRef = this._dialogService.openPrompt({
-          title: 'Diary Entry (FHIR Task)',
-          message: 'Use this to add Tasks (Diary Entries) to GP workflow',
-          value: 'Asthma Medication Review',
-          cancelButton: 'Cancel',
-          acceptButton: 'Ok',
+      const task: Task = {
+          status: 'ready',
+          intent: 'proposal',
+          resourceType: 'Task',
+          reasonCode: {
+              coding: [{
+                  code: '182836005'
+              }]
+          }
+      };
+
+      const {
+          matDialogRef,
+          dragRefSubject,
+      }: IDraggableRefs<DiaryEntryComponent> = this._dialogService.openDraggable({
+          component: DiaryEntryComponent,
+          dragHandleSelectors: ['mat-toolbar'],
+          config: {
+              panelClass: ['td-window-dialog'], // pass this class in to ensure certain css is properly added,
+              data : task
+          },
       });
-      matDialogRef.afterClosed().subscribe(result => {
-          console.log(matDialogRef.componentInstance.value);
-      });
+
+      matDialogRef.componentInstance.closed.subscribe(() => matDialogRef.close());
   }
 
 }

@@ -36,10 +36,11 @@ import {GpDiaryComponent} from "./gp-diary/gp-diary.component";
 import {CovalentDialogsModule} from "@covalent/core/dialogs";
 import {MatDialogModule} from '@angular/material/dialog';
 import { RefillComponent } from './refill/refill.component';
-import { GpTaskComponent } from './gp-task/gp-task.component';
 import { DiaryEntryComponent } from './diary-entry/diary-entry.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
-
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatMomentDateModule} from "@angular/material-moment-adapter";
+import {MAT_DATE_LOCALE} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -53,7 +54,6 @@ import {MatFormFieldModule} from "@angular/material/form-field";
       LoginComponent,
       PrescriptionOrderDetailComponent,
       RefillComponent,
-      GpTaskComponent,
       DiaryEntryComponent
   ],
     imports: [
@@ -86,14 +86,20 @@ import {MatFormFieldModule} from "@angular/material/form-field";
         ReactiveFormsModule,
         FormsModule,
         MatDialogModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatDatepickerModule,
+        MatMomentDateModule
+
     ],
     entryComponents: [
         PrescriptionOrderDetailComponent,
         RefillComponent
     ],
   providers: [
-      AuthGuard
+      AuthGuard,
+      {provide: MAT_DATE_LOCALE
+          , useValue: 'en-GB'},
+
   ],
   bootstrap: [AppComponent]
 })

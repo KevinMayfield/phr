@@ -1,20 +1,20 @@
 <td-window-dialog
-        [title]="'Create Diary Entry'"
+        [title]="'Create Diary Entry (FHIR Task)'"
         [toolbarColor]="'accent'"
-        [closeLabel]="'Close'"
-        (closed)="closed.emit()"
+        (close)="closed.emit()"
 >
-    <td-dynamic-forms [elements]="numberElements">
-        <ng-template let-element ngFor [ngForOf]="numberElements">
-            <ng-template let-control="control" [tdDynamicFormsError]="element.name">
-     <span *ngIf="control.touched || !control.pristine">
-       <span *ngIf="control.hasError('min')">Min value: {{ element.min }}</span>
-       <span *ngIf="control.hasError('max')">Max value: {{ element.max }}</span>
-     </span>
-            </ng-template>
-        </ng-template>
+    <mat-card>
+    <td-dynamic-forms #diaryForm [elements]="formElements" >
+
     </td-dynamic-forms>
-    <button mat-raised-button color="primary" class="text-upper">
-        Toggle Loader
+
+        <mat-card-actions>
+        <button mat-raised-button class="text-upper" (click)="closed.emit()">
+            Cancel
+        </button>
+    <button mat-raised-button class="text-upper" (click)="ok($event)">
+        Ok
     </button>
+        </mat-card-actions>
+    </mat-card>
 </td-window-dialog>

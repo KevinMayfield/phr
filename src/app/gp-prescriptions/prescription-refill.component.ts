@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {FhirService} from '../service/FhirService';
-import {MedicationRequest} from 'fhir/r4';
+import {MedicationRequest, Task} from 'fhir/r4';
 import {DatePipe} from '@angular/common';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {
@@ -41,7 +41,29 @@ export class PrescriptionRefillComponent implements OnInit {
          this.dataSource = new MatTableDataSource(this.fhir.getMedicationRequests());
       });
   }
-  refill(resource: any): void {
+  refill(resource: MedicationRequest): void {
+
+      const task: Task = {
+          status: 'ready',
+          intent: 'proposal',
+          resourceType: 'Task',
+          reasonCode: {
+              coding: [{
+                  code: '103742009'
+              }]
+          }
+      };
+      if (resource.medicationCodeableConcept !== undefined
+          && resource.medicationCodeableConcept.coding !== undefined
+          && resource.medicationCodeableConcept.coding[0].display !== undefined) {
+          // @ts-ignore
+          task.note = [
+              {
+                  text: resource.medicationCodeableConcept.coding[0].display
+                      + ' ('+  this.datepipe.transform(resource.authoredOn, 'dd MMM yyyy') +  ')'
+              }
+          ]
+      }
 
       const {
           matDialogRef,
@@ -51,9 +73,7 @@ export class PrescriptionRefillComponent implements OnInit {
           dragHandleSelectors: ['mat-toolbar'],
           config: {
               panelClass: ['td-window-dialog'], // pass this class in to ensure certain css is properly added,
-              data : {
-                  text : 'some text'
-              }
+              data : task
           },
       });
 
