@@ -52,16 +52,16 @@
         </ng-container>
 
         <ng-container matColumnDef="view_order">
-            <th mat-header-cell *matHeaderCellDef [style.width.px]="120"> View Order  </th>
+            <th mat-header-cell *matHeaderCellDef [style.width.px]="50"> Details  </th>
             <td mat-cell *matCellDef="let element">
-                <button color="accent" mat-icon-button (click)="view(element)" ><mat-icon>inventory</mat-icon>View Details</button>
+                <button color="accent" mat-icon-button matTooltip="Prescription Order Details" (click)="view(element)" ><mat-icon>inventory</mat-icon></button>
             </td>
         </ng-container>
 
         <ng-container matColumnDef="track_order">
-            <th mat-header-cell *matHeaderCellDef [style.width.px]="120"> Tracking  </th>
+            <th mat-header-cell *matHeaderCellDef [style.width.px]="50"> Tracking  </th>
             <td mat-cell *matCellDef="let element">
-                <button color="accent" mat-icon-button ><mat-icon (click)="tracking($event)"> local_shipping</mat-icon>Tracking</button>
+                <button color="accent" matTooltip="Tracking" mat-icon-button ><mat-icon (click)="tracking($event)"> local_shipping</mat-icon></button>
             </td>
         </ng-container>
 

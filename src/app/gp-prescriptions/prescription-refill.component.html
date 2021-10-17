@@ -46,18 +46,18 @@
         <!-- Symbol Column -->
 
         <ng-container matColumnDef="reorder_medication">
-            <th mat-header-cell *matHeaderCellDef [style.width.px]="120"> Reorder </th>
+            <th mat-header-cell *matHeaderCellDef [style.width.px]="50"> Reorder </th>
             <td mat-cell *matCellDef="let element">
                 <span *ngIf="element.courseOfTherapyType.coding[0].code === 'continuous'">
-                    <button color="accent" mat-icon-button (click)="refill(element)"><mat-icon>add_shopping_cart</mat-icon>Reorder</button>
+                    <button color="accent" mat-icon-button matTooltip="Reorder Medication" (click)="refill(element)"><mat-icon>add_shopping_cart</mat-icon></button>
                 </span>
             </td>
         </ng-container>
 
         <ng-container matColumnDef="track_order">
-            <th mat-header-cell *matHeaderCellDef [style.width.px]="120"> Tracking  </th>
+            <th mat-header-cell *matHeaderCellDef [style.width.px]="50"> Tracking</th>
             <td mat-cell *matCellDef="let element">
-                <button color="accent" mat-icon-button (click)="tracking(element)"><mat-icon>local_shipping</mat-icon>Tracking</button>
+                <button color="accent"  mat-icon-button matTooltip="Tracking" (click)="tracking(element)"><mat-icon>local_shipping</mat-icon></button>
             </td>
         </ng-container>
 
