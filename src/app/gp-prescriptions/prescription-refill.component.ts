@@ -1,20 +1,20 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {FhirService} from '../service/FhirService';
 import {MedicationRequest, Task} from 'fhir/r4';
 import {DatePipe} from '@angular/common';
-import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {MatDialog} from '@angular/material/dialog';
 import {
     IDraggableRefs,
     ResizableDraggableDialog,
     TdDialogService,
     TdPromptDialogComponent
-} from "@covalent/core/dialogs";
-import {DiaryEntryComponent} from "../diary-entry/diary-entry.component";
-import {TrackingComponent} from "../tracking/tracking.component";
-import {NhsdService} from "../service/nhsd.service";
-import {environment} from "../../environments/environment";
-
+} from '@covalent/core/dialogs';
+import {DiaryEntryComponent} from '../diary-entry/diary-entry.component';
+import {TrackingComponent} from '../tracking/tracking.component';
+import {NhsdService} from '../service/nhsd.service';
+import {environment} from '../../environments/environment';
+import {MatSort} from '@angular/material/sort';
 
 
 @Component({
@@ -25,9 +25,11 @@ import {environment} from "../../environments/environment";
 export class PrescriptionRefillComponent implements OnInit {
 
     @Input()
-    source: string = 'GP';
+    source = 'GP';
 
-    displayedColumns: string[] = ['authored', 'status', 'name',  'courseOfTherapy',  'quantity', 'unit', 'reorder_medication', 'track_order'];
+    @ViewChild(MatSort) sort: MatSort | undefined;
+
+    displayedColumns: string[] = ['authoredOn', 'status', 'name',  'courseOfTherapy', 'dose',  'quantity', 'unit', 'reorder_medication', 'track_order'];
 
     dataSource: any;
 
@@ -43,14 +45,13 @@ export class PrescriptionRefillComponent implements OnInit {
 
   ngOnInit(): void {
       this.dataSource = new MatTableDataSource <any>(this.data);
-      if (this.source == 'GP') {
+      if (this.source === 'GP') {
           this.fhir.queryMedicationRequests();
           this.fhir.medicationChange.subscribe(() => {
 
               this.dataSource = new MatTableDataSource(this.fhir.getMedicationRequests());
           });
-      }
-      if (this.source == 'EPS') {
+      } else {
           this.nhsd.getMedicationRequest(environment.nhsd + '/MedicationRequest?patient.identifier=9876543210');
           this.nhsd.medicationRequest.subscribe(() => {
 
@@ -58,6 +59,18 @@ export class PrescriptionRefillComponent implements OnInit {
           });
       }
   }
+
+    // tslint:disable-next-line:typedef
+    ngAfterViewInit() {
+        if (this.sort !== undefined) {
+            this.sort.sortChange.subscribe((event: any) => {
+                console.log(event);
+            });
+            this.dataSource.sort = this.sort;
+        } else {
+            console.log('SORT UNDEFINED');
+        }
+    }
 
   tracking(event: any): void {
       const {
@@ -93,9 +106,9 @@ export class PrescriptionRefillComponent implements OnInit {
           task.note = [
               {
                   text: resource.medicationCodeableConcept.coding[0].display
-                      + ' ('+  this.datepipe.transform(resource.authoredOn, 'dd MMM yyyy') +  ')'
+                      + ' (' +  this.datepipe.transform(resource.authoredOn, 'dd MMM yyyy') +  ')'
               }
-          ]
+          ];
       }
 
       const {

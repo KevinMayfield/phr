@@ -12,36 +12,37 @@ import {CovalentBaseEchartsModule} from "@covalent/echarts/base";
 import {CovalentHttpModule} from "@covalent/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MainComponent} from "./main/main.component";
-import {MatChipsModule} from "@angular/material/chips";
-import {MatTooltipModule} from "@angular/material/tooltip";
-import {MatTableModule} from "@angular/material/table";
+import {MatChipsModule} from '@angular/material/chips';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTableModule} from '@angular/material/table';
 import {CovalentDataTableModule} from "@covalent/core/data-table";
-import {MatButtonModule} from "@angular/material/button";
-import {MatIconModule} from "@angular/material/icon";
-import {MatMenuModule} from "@angular/material/menu";
-import {MatCardModule} from "@angular/material/card";
-import {MatList, MatListModule} from "@angular/material/list";
-import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+import {MatList, MatListModule} from '@angular/material/list';
+import {MatSortModule} from '@angular/material/sort';
+import {FlexLayoutModule} from '@angular/flex-layout';
 import { OrdersComponent } from './orders/orders.component';
-import {PrescriptionRefillComponent} from "./gp-prescriptions/prescription-refill.component";
-import {PrescriptionOrderDetailComponent} from "./prescription-order-detail/prescription-order-detail.component";
-import {CovalentMessageModule} from "@covalent/core/message";
-import {PrescriptionOrdersComponent} from "./eps-orders/prescription-orders.component";
-import {CallbackComponent} from "./callback/callback.component";
-import {AuthGuard} from "./service/auth-guard";
+import {PrescriptionRefillComponent} from './gp-prescriptions/prescription-refill.component';
+import {PrescriptionOrderDetailComponent} from './prescription-order-detail/prescription-order-detail.component';
+import {CovalentMessageModule} from '@covalent/core/message';
+import {PrescriptionOrdersComponent} from './eps-orders/prescription-orders.component';
+import {CallbackComponent} from './callback/callback.component';
+import {AuthGuard} from './service/auth-guard';
 import { LoginComponent } from './login/login.component';
 import {CovalentFileModule} from "@covalent/core/file";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {GpDiaryComponent} from "./gp-diary/gp-diary.component";
 import {CovalentDialogsModule} from "@covalent/core/dialogs";
 import {MatDialogModule} from '@angular/material/dialog';
 import { DiaryEntryComponent } from './diary-entry/diary-entry.component';
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatDatepickerModule} from "@angular/material/datepicker";
-import {MatMomentDateModule} from "@angular/material-moment-adapter";
-import {MAT_DATE_LOCALE} from "@angular/material/core";
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatMomentDateModule} from '@angular/material-moment-adapter';
+import {MAT_DATE_LOCALE} from '@angular/material/core';
 import { TrackingComponent } from './tracking/tracking.component';
-import {CovalentFlavoredMarkdownModule} from "@covalent/flavored-markdown";
+import {CovalentFlavoredMarkdownModule} from '@covalent/flavored-markdown';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import {CovalentFlavoredMarkdownModule} from "@covalent/flavored-markdown";
         MatDialogModule,
         MatFormFieldModule,
         MatDatepickerModule,
-        MatMomentDateModule
+        MatMomentDateModule,
+        MatSortModule
 
     ],
     entryComponents: [
