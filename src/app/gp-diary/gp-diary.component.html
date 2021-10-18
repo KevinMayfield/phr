@@ -56,7 +56,8 @@
 
         <ng-container matColumnDef="notes">
             <th mat-header-cell *matHeaderCellDef> Notes </th>
-            <td mat-cell *matCellDef="let element">  </td>
+            <td mat-cell *matCellDef="let element">
+            <span *ngIf="element.note !== undefined"> {{element.note[0].text}} </span></td>
         </ng-container>
 
         <!-- Symbol Column -->
