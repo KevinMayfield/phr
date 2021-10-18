@@ -1,5 +1,5 @@
 # Phr
 
-## github pages notes
+https://kevinmayfield.github.io/phr/
 
-ng build --output-path docs --base-href /phr/
+Simple demo of patient facing services using multiple FHIR Servers.
