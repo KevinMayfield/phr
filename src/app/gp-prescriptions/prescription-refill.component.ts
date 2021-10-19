@@ -33,7 +33,7 @@ export class PrescriptionRefillComponent implements OnInit {
 
     dataSource: any;
 
-    data: MedicationRequest[] =  [];
+    prescription: MedicationRequest[] =  [];
 
     datepipe: DatePipe = new DatePipe('en-GB');
 
@@ -44,29 +44,32 @@ export class PrescriptionRefillComponent implements OnInit {
               private _dialogService: TdDialogService) { }
 
   ngOnInit(): void {
-      this.dataSource = new MatTableDataSource <any>(this.data);
+      this.dataSource = new MatTableDataSource <any>(this.prescription);
       if (this.source === 'GP') {
           this.fhir.queryMedicationRequests();
           this.fhir.medicationChange.subscribe(() => {
-
-              this.dataSource = new MatTableDataSource(this.fhir.getMedicationRequests());
+              this.prescription = this.fhir.getMedicationRequests();
+              this.dataSource = new MatTableDataSource(this.prescription);
+              this.dataSource.sort = this.sort;
           });
       } else {
           this.nhsd.getMedicationRequest(environment.nhsd + '/MedicationRequest?patient.identifier=9876543210');
           this.nhsd.medicationRequest.subscribe(() => {
-
-              this.dataSource = new MatTableDataSource(this.nhsd.getMedicationRequests());
+              this.prescription =this.nhsd.getMedicationRequests();
+              this.dataSource = new MatTableDataSource(this.prescription);
+              this.dataSource.sort = this.sort;
           });
       }
   }
 
     // tslint:disable-next-line:typedef
     ngAfterViewInit() {
+
         if (this.sort !== undefined) {
             this.sort.sortChange.subscribe((event: any) => {
                 console.log(event);
             });
-            this.dataSource.sort = this.sort;
+
         } else {
             console.log('SORT UNDEFINED');
         }
