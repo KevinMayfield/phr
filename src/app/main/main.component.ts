@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {TdMediaService} from "@covalent/core/media";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-main',
@@ -8,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
 
   opened = false;
-  constructor() { }
+  constructor(public media: TdMediaService,
+              private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onClick(route: string) {
+    this.router.navigateByUrl(route);
   }
 
 }

@@ -5,13 +5,16 @@ import {OrdersComponent} from './orders/orders.component';
 import {CallbackComponent} from './callback/callback.component';
 import {AuthGuard} from './service/auth-guard';
 import {LoginComponent} from './login/login.component';
+import { MedicationsComponent } from './medications/medications.component';
 
 const routes: Routes = [
   { path: '', canActivate: [AuthGuard], component: MainComponent,
     children : [
-      {
-        path: '', component: OrdersComponent
-      }]},
+      {path: '', component: OrdersComponent },
+      {path: 'tasks', component: OrdersComponent },
+      {path: 'medications', component: MedicationsComponent }
+        ]
+  },
   {  path: 'callback', component : CallbackComponent},
   {  path: 'login', component : LoginComponent}
 ];

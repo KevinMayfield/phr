@@ -29,7 +29,7 @@ export class PrescriptionRefillComponent implements OnInit {
 
     @ViewChild(MatSort) sort: MatSort | undefined;
 
-    displayedColumns: string[] = ['authoredOn', 'status', 'name',  'courseOfTherapy', 'dose',  'quantity', 'unit', 'reorder_medication', 'track_order'];
+    displayedColumns: string[] = ['authoredOn', 'status', 'name',  'courseOfTherapy', 'dose',  'quantity', 'reorder_medication', 'track_order'];
 
     dataSource: any;
 

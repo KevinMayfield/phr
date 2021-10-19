@@ -43,6 +43,9 @@ import {MatMomentDateModule} from '@angular/material-moment-adapter';
 import {MAT_DATE_LOCALE} from '@angular/material/core';
 import { TrackingComponent } from './tracking/tracking.component';
 import {CovalentFlavoredMarkdownModule} from '@covalent/flavored-markdown';
+import { MedicationsComponent } from './medications/medications.component';
+import {CovalentMediaModule} from "@covalent/core/media";
+
 
 @NgModule({
   declarations: [
@@ -56,7 +59,8 @@ import {CovalentFlavoredMarkdownModule} from '@covalent/flavored-markdown';
       LoginComponent,
       PrescriptionOrderDetailComponent,
       DiaryEntryComponent,
-      TrackingComponent
+      TrackingComponent,
+      MedicationsComponent
   ],
     imports: [
         BrowserModule,
@@ -75,6 +79,7 @@ import {CovalentFlavoredMarkdownModule} from '@covalent/flavored-markdown';
         CovalentMessageModule,
         CovalentDialogsModule,
         CovalentFlavoredMarkdownModule,
+        CovalentMediaModule,
 
         MatIconModule,
         MatButtonModule,
@@ -106,4 +111,7 @@ import {CovalentFlavoredMarkdownModule} from '@covalent/flavored-markdown';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+// @ts-ignore
+export class AppModule {
+    // nothing
+}

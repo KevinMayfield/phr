@@ -1,11 +1,7 @@
-<mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="/order"><mat-icon>shopping_basket</mat-icon>My Tasks</button>
-    <button mat-menu-item routerLink="/search"><mat-icon>add_shopping_cart</mat-icon>Search and Add Tasks</button>
-    <button mat-menu-item routerLink="/refill"><mat-icon>reorder</mat-icon>Reorder Medications</button>
-</mat-menu>
-<mat-menu #dosmenu="matMenu">
-    <button mat-menu-item routerLink="/patient"><mat-icon>person</mat-icon>Patient</button>
-    <button mat-menu-item routerLink="/pharmacy"><mat-icon>store</mat-icon>Pharmacy</button>
+
+<mat-menu #recordsMenu="matMenu">
+    <button mat-menu-item routerLink="/tasks"><mat-icon>gavel</mat-icon>Task Manager</button>
+    <button mat-menu-item routerLink="/medications"><mat-icon>sanitizer</mat-icon>Medications</button>
 </mat-menu>
 <td-layout class="layout-nav-demo" sidenavWidth="280px">
     <td-navigation-drawer
@@ -16,26 +12,26 @@
         <span>
     </span>
     </td-navigation-drawer>
-    <td-layout-nav-list navigationRoute="/" mode="side" [opened]=opened>
+    <td-layout-nav-list navigationRoute="/" mode="side"  [opened]=opened>
 
         <div td-sidenav-content>
-
-
+            stuff
         </div>
         <div td-toolbar-content layout="row" layout-align="start center" flex>
 
-           <!-- <button mat-icon-button td-menu-button tdLayoutToggle>
-                <mat-icon>menu</mat-icon>
-            </button>
--->
             <span>Codename: Danube</span>
             <span flex></span>
 
-           <!-- <button mat-icon-button [matMenuTriggerFor]="dosmenu" matTooltip="Directory Services"><mat-icon>search</mat-icon><mat-icon>arrow_drop_down</mat-icon></button>
--->
             <button mat-button  matTooltip="Orders"><mat-icon>add_shopping_cart</mat-icon>Basket</button>
-
+            <button mat-icon-button [matMenuTriggerFor]="recordsMenu"><mat-icon>menu</mat-icon></button>
         </div>
+
+
         <router-outlet></router-outlet>
+        <td-layout-footer>
+            <div layout="row" layout-align="start center">
+                <span class="mat-caption">Copyright &copy; 2021 Virtually Healthcare and Mayfield IS. All rights reserved</span>
+            </div>
+        </td-layout-footer>
     </td-layout-nav-list>
 </td-layout>
