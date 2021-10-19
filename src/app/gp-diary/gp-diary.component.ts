@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {Task} from 'fhir/r4';
 import {DatePipe} from "@angular/common";
@@ -6,6 +6,7 @@ import {FhirService} from "../service/FhirService";
 import {MatDialog} from "@angular/material/dialog";
 import {IDraggableRefs, TdDialogService} from "@covalent/core/dialogs";
 import {DiaryEntryComponent} from "../diary-entry/diary-entry.component";
+import {MatSort} from "@angular/material/sort";
 
 @Component({
   selector: 'app-gp-diary',
@@ -21,6 +22,8 @@ export class GpDiaryComponent implements OnInit {
     dataSource: any;
     data: Task[] = [];
 
+    @ViewChild(MatSort) sort: MatSort | undefined;
+
 
   constructor(private fhir: FhirService,
               private dialog: MatDialog,
@@ -31,7 +34,9 @@ export class GpDiaryComponent implements OnInit {
      this.dataSource = new MatTableDataSource <any>(this.data);
      this.fhir.queryTasks();
      this.fhir.taskChange.subscribe(() => {
-          this.dataSource = new MatTableDataSource(this.fhir.getTasks());
+         this.data = this.fhir.getTasks();
+         this.dataSource = new MatTableDataSource(this.data);
+         this.dataSource.sort = this.sort;
       });
   }
   diary(): void {

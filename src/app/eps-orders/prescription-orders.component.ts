@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatDialog,MatDialogConfig} from '@angular/material/dialog';
 import {NhsdService} from '../service/nhsd.service';
@@ -7,6 +7,7 @@ import {DatePipe} from "@angular/common";
 import {PrescriptionOrderDetailComponent} from "../prescription-order-detail/prescription-order-detail.component";
 import {IDraggableRefs, TdDialogService} from "@covalent/core/dialogs";
 import {TrackingComponent} from "../tracking/tracking.component";
+import {MatSort} from "@angular/material/sort";
 
 @Component({
   selector: 'app-prescription-orders',
@@ -17,11 +18,13 @@ export class PrescriptionOrdersComponent implements OnInit {
 
 
     datepipe: DatePipe = new DatePipe('en-GB');
-    displayedColumns: string[] = ['authored', 'status', 'requester', 'pharmacy', 'medications', 'order_number',  'view_order', 'track_order'];
+
+    displayedColumns: string[] = ['authoredOn', 'status', 'requester', 'pharmacy', 'medications',
+        'order_number',  'view_order', 'track_order'];
 
     dataSource: any;
     data: Task[] = [];
-
+    @ViewChild(MatSort) sort: MatSort | undefined;
 
 
   constructor(private hapi: NhsdService,
@@ -32,7 +35,9 @@ export class PrescriptionOrdersComponent implements OnInit {
      this.dataSource = new MatTableDataSource <any>(this.data);
      this.hapi.queryTasks();
      this.hapi.taskChange.subscribe(() => {
-          this.dataSource = new MatTableDataSource(this.hapi.getTasks());
+         this.data = this.hapi.getTasks();
+         this.dataSource = new MatTableDataSource(this.data);
+         this.dataSource.sort = this.sort;
       });
   }
 

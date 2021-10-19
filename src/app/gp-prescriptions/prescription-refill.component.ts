@@ -55,7 +55,7 @@ export class PrescriptionRefillComponent implements OnInit {
       } else {
           this.nhsd.getMedicationRequest(environment.nhsd + '/MedicationRequest?patient.identifier=9876543210');
           this.nhsd.medicationRequest.subscribe(() => {
-              this.prescription =this.nhsd.getMedicationRequests();
+              this.prescription = this.nhsd.getMedicationRequests();
               this.dataSource = new MatTableDataSource(this.prescription);
               this.dataSource.sort = this.sort;
           });
@@ -96,6 +96,7 @@ export class PrescriptionRefillComponent implements OnInit {
           status: 'ready',
           intent: 'proposal',
           resourceType: 'Task',
+          note : [],
           reasonCode: {
               coding: [{
                   code: '103742009'
@@ -113,7 +114,16 @@ export class PrescriptionRefillComponent implements OnInit {
               }
           ];
       }
-
+      if (this.source === 'EPS') {
+          task.note?.push({
+              text : 'EPS prescription number ' + resource.groupIdentifier?.value + ' '
+          });
+          if (resource.requester?.display !== undefined) {
+              task.note?.push({
+                  text : 'Prescriber ' + resource.requester.display
+              });
+          }
+      }
       const {
           matDialogRef,
           dragRefSubject,

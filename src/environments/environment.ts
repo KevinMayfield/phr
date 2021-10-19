@@ -10,8 +10,8 @@ export const environment = {
     cookie_domain : 'localhost',
     logonUrl: 'http://localhost:4200/ccri-logon'
   },
-  virtually1: 'https://test-emis.virtually.healthcare/R4',
-  virtually: 'http://127.0.0.1:8180/R4',
+  virtually: 'https://test-emis.virtually.healthcare/R4',
+  virtuallyt: 'http://127.0.0.1:8180/R4',
   nhsd: 'https://server.fire.ly/r4',
   hapibase: 'http://hapi.fhir.org/baseR4',
   firelybase : 'https://server.fire.ly/r4'
